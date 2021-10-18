@@ -1,4 +1,0 @@
-org.springframework.cloud.bootstrap.BootstrapConfiguration=com.fitmgr.common.log.systemlog.CustomPropertySourceLocator
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.fitmgr.job.api.conf.FitmgrJobConfig,\
-  com.fitmgr.job.api.sdk.FhJobApiController
