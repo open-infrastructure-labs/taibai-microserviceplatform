@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitmgr.meterage.mapper.ChargeItemPropertyMapper">
+
+    <!-- 批量新增计费属性 -->
+    <insert id="saveChargeItemProperties" parameterType="java.util.List">
+        insert into charge_item_property
+        (
+            uuid,
+            charge_uuid,
+            charge_property_key,
+            charge_property_value,
+            del_flag,
+            create_time
+        )
+        values
+        <foreach collection="list" item="chargeItemProperties" separator=",">
+            (
+                #{chargeItemProperties.uuid},
+                #{chargeItemProperties.chargeUuid},
+                #{chargeItemProperties.chargePropertyKey},
+                #{chargeItemProperties.chargePropertyValue},
+                #{chargeItemProperties.delFlag},
+                #{chargeItemProperties.createTime}
+             )
+        </foreach>
+    </insert>
+
+</mapper>

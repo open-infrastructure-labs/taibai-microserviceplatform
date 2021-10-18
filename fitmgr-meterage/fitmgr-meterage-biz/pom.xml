@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>fitmgr-meterage</artifactId>
+        <groupId>com.fitmgr</groupId>
+        <version>V3R3XCB010</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>fitmgr-meterage-biz</artifactId>
+    <packaging>jar</packaging>
+
+    <description>fitmgr 通用计量管理公共biz模块</description>
+    <properties>
+        <dynamic.compile>true</dynamic.compile>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-ribbon</artifactId>
+            <version>${spring-cloud-netflix-ribbon.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+            <version>${spring-cloud-openfeign-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+            <version>${spring-cloud-commons.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collections4.version}</version>
+        </dependency>
+        <!--message api、model 模块-->
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-meterage-api</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+
+        <!--admin模块 -->
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-admin-api</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+        <!--日志处理-->
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-common-log</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-common-data</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+        <!--swagger-->
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-common-swagger</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+        <!--文件系统-->
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-common-minio</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+        <!--eureka 客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--配置中心客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <!--spring security 、oauth、jwt依赖-->
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-common-security</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+        <!--支持动态路由配置 -->
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-common-gateway</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+        <!--mybatis-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+        <!--数据库-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!--web 模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--undertow容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.1</version>
+        </dependency> -->
+        <!--集成logstash-->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>${logstash.version}</version>
+        </dependency>
+        <!--代码生成器-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis-plus.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- POI导出 -->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi-meterage.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi-meterage.version}</version>
+        </dependency>
+        <!-- 解析dom -->
+        <dependency>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>${jdom.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-job-api</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-order-api</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-common-encrypt</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- 指定该Main Class为全局的唯一入口 -->
+                    <mainClass>com.fitmgr.meterage.MeterageApplication</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <configuration>
+                    <skip>${dynamic.compile}</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <url>http://10.127.9.32:8081/repository/maven-fitmgr-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshot</name>
+            <url>http://10.127.9.32:8081/repository/maven-fitmgr-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

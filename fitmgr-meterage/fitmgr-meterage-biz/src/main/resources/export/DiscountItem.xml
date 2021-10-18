@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<FieldsSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Settings>
+        <fieldSetting>
+            <fieldCnName>主键ID</fieldCnName> <!-- excel的标题 -->
+            <fieldDbName>id</fieldDbName> <!-- 对象对应的属性名 -->
+            <fieldWidth>40</fieldWidth> <!-- 单元格宽度1-200 （不建议写200，不写默认自适应） -->
+        </fieldSetting>
+        <fieldSetting>
+            <fieldCnName>折扣项名称</fieldCnName>
+            <fieldDbName>discountName</fieldDbName>
+            <fieldWidth>50</fieldWidth>
+        </fieldSetting>
+        <fieldSetting>
+            <fieldCnName>计费项名称</fieldCnName>
+            <fieldDbName>meterageName</fieldDbName>
+            <fieldWidth>20</fieldWidth>
+        </fieldSetting>
+        <fieldSetting>
+            <fieldCnName>当前折扣</fieldCnName>
+            <fieldDbName>currentDiscountStr</fieldDbName>
+            <fieldWidth>20</fieldWidth>
+        </fieldSetting>
+        <fieldSetting>
+            <fieldCnName>计划开始时间</fieldCnName>
+            <fieldDbName>planTimeFormat</fieldDbName>
+            <fieldWidth>20</fieldWidth>
+        </fieldSetting>
+        <fieldSetting>
+            <fieldCnName>计划结束时间</fieldCnName>
+            <fieldDbName>endTimeFormat</fieldDbName>
+            <fieldWidth>20</fieldWidth>
+        </fieldSetting>
+        <fieldSetting>
+            <fieldCnName>折扣类型</fieldCnName>
+            <fieldDbName>discountTypeName</fieldDbName>
+            <fieldWidth>20</fieldWidth>
+        </fieldSetting>
+        <fieldSetting>
+            <fieldCnName>生效范围</fieldCnName>
+            <fieldDbName>effectRangeName</fieldDbName>
+            <fieldWidth>20</fieldWidth>
+        </fieldSetting>
+        <fieldSetting>
+            <fieldCnName>折扣状态</fieldCnName>
+            <fieldDbName>discountStatusName</fieldDbName>
+            <fieldWidth>20</fieldWidth>
+        </fieldSetting>
+        <fieldSetting>
+            <fieldCnName>当前折扣生效时间</fieldCnName>
+            <fieldDbName>currentDiscountEffectTimeStr</fieldDbName>
+            <fieldWidth>20</fieldWidth>
+        </fieldSetting>
+        <fieldSetting>
+            <fieldCnName>创建时间</fieldCnName>
+            <fieldDbName>createTimeFormat</fieldDbName>
+            <fieldWidth>20</fieldWidth>
+        </fieldSetting>
+    </Settings>
+</FieldsSettings>
