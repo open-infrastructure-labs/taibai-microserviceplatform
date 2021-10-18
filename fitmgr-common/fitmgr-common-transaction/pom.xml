@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>fitmgr-common</artifactId>
+        <groupId>com.fitmgr</groupId>
+        <version>V3R3B010</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>fitmgr-common-transaction</artifactId>
+    <packaging>jar</packaging>
+
+    <description>fitmgr lcn 分布式事务</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fitmgr</groupId>
+            <artifactId>fitmgr-common-core</artifactId>
+            <version>${fitmgr.version}</version>
+        </dependency>
+        <!--lcn 模块端控制依赖-->
+        <dependency>
+            <groupId>com.codingapi</groupId>
+            <artifactId>tx-client</artifactId>
+            <version>${lcn.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.codingapi</groupId>
+            <artifactId>tx-plugins-db</artifactId>
+            <version>${lcn.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--feign 依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+    </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <url>http://10.127.9.32:8081/repository/maven-fitmgr-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshot</name>
+            <url>http://10.127.9.32:8081/repository/maven-fitmgr-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "security.oauth2.client",
+      "type": "com.fitmgr.common.security.component.PermitAllUrlProperties",
+      "sourceType": "com.fitmgr.common.security.component.PermitAllUrlProperties"
+    },
+    {
+      "name": "social.qq",
+      "type": "com.fitmgr.common.security.social.QqSocialConfig",
+      "sourceType": "com.fitmgr.common.security.social.QqSocialConfig"
+    },
+    {
+      "name": "social.wx",
+      "type": "com.fitmgr.common.security.social.WxSocialConfig",
+      "sourceType": "com.fitmgr.common.security.social.WxSocialConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "security.oauth2.client.ignore-urls",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.fitmgr.common.security.component.PermitAllUrlProperties"
+    },
+    {
+      "name": "social.qq.appid",
+      "type": "java.lang.String",
+      "sourceType": "com.fitmgr.common.security.social.QqSocialConfig"
+    },
+    {
+      "name": "social.qq.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.fitmgr.common.security.social.QqSocialConfig"
+    },
+    {
+      "name": "social.wx.appid",
+      "type": "java.lang.String",
+      "sourceType": "com.fitmgr.common.security.social.WxSocialConfig"
+    },
+    {
+      "name": "social.wx.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.fitmgr.common.security.social.WxSocialConfig"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "ribbon.rule",
+      "type": "com.fitmgr.common.gateway.support.RibbonRuleProperties",
+      "sourceType": "com.fitmgr.common.gateway.support.RibbonRuleProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "ribbon.rule.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启，默认：true",
+      "sourceType": "com.fitmgr.common.gateway.support.RibbonRuleProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "ribbon.rule.gray-enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启灰度路由，默认:false",
+      "sourceType": "com.fitmgr.common.gateway.support.RibbonRuleProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "ribbon.rule.prior-ip-pattern",
+      "type": "java.util.List<java.lang.String>",
+      "description": "优先的ip列表，支持通配符，例如：10.20.0.8*、10.20.0.*",
+      "sourceType": "com.fitmgr.common.gateway.support.RibbonRuleProperties"
+    }
+  ],
+  "hints": []
+}

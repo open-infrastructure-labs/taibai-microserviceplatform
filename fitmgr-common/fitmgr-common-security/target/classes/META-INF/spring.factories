@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.springframework.cloud.openfeign.FitmgrHystrixFeignTargeterConfiguration,\
+  com.fitmgr.common.security.component.GlobalExceptionHandlerResolver,\
+  com.fitmgr.common.security.component.FitmgrTokenEnhancer,\
+com.fitmgr.common.security.service.FitmgrUserDetailsServiceImpl,\
+com.fitmgr.common.security.service.impl.LdapUserDetailsServiceImpl

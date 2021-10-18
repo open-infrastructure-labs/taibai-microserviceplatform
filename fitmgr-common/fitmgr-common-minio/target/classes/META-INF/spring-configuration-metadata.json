@@ -1,0 +1,30 @@
+{
+  "groups": [
+    {
+      "name": "minio",
+      "type": "com.fitmgr.common.minio.MinioProperties",
+      "sourceType": "com.fitmgr.common.minio.MinioProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "minio.access-key",
+      "type": "java.lang.String",
+      "description": "用户名",
+      "sourceType": "com.fitmgr.common.minio.MinioProperties"
+    },
+    {
+      "name": "minio.secret-key",
+      "type": "java.lang.String",
+      "description": "密码",
+      "sourceType": "com.fitmgr.common.minio.MinioProperties"
+    },
+    {
+      "name": "minio.url",
+      "type": "java.lang.String",
+      "description": "minio 服务地址 http:\/\/ip:port",
+      "sourceType": "com.fitmgr.common.minio.MinioProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "kms",
+      "type": "com.fitmgr.common.encrypt.config.KeyYmlModel",
+      "sourceType": "com.fitmgr.common.encrypt.config.KeyYmlModel"
+    }
+  ],
+  "properties": [
+    {
+      "name": "kms.datakey",
+      "type": "java.util.Set<com.fitmgr.common.encrypt.model.KeyVersion>",
+      "sourceType": "com.fitmgr.common.encrypt.config.KeyYmlModel"
+    },
+    {
+      "name": "kms.masterkey",
+      "type": "java.util.Set<com.fitmgr.common.encrypt.model.KeyVersion>",
+      "sourceType": "com.fitmgr.common.encrypt.config.KeyYmlModel"
+    }
+  ],
+  "hints": []
+}
