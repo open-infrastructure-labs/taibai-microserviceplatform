@@ -1,7 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    com.fitmgr.common.encrypt.jasypt.FhJasyptConfig,\
-    com.fitmgr.common.encrypt.config.ServiceAppNameCfg,\
-    com.fitmgr.common.encrypt.config.KeyYmlModel,\
-    com.fitmgr.common.encrypt.util.SpringContextHolder,\
-    com.fitmgr.common.encrypt.config.InternalRestTemplateConfig,\
-    com.fitmgr.common.encrypt.config.InternalAdminConfig

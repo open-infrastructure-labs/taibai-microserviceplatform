@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-    com.fitmgr.common.key.update.receive.MsgReceiver,\
-    com.fitmgr.common.key.update.config.RabbitConfig,\
-    com.fitmgr.common.key.update.register.RegisterToKms
