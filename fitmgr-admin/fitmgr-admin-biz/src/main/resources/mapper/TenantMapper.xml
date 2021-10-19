@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitmgr.admin.mapper.TenantMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fitmgr.admin.api.entity.Tenant">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="english_name" property="englishName"/>
+        <result column="type_id" property="typeId"/>
+        <result column="description" property="description"/>
+        <result column="status" property="status"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_project" property="createProject"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="level" property="level"/>
+    </resultMap>
+
+    <!-- tenantVo查询映射结果 -->
+    <resultMap id="tenantVoResultMap" type="com.fitmgr.admin.api.vo.TenantVO">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="english_name" property="englishName"/>
+        <result column="type_id" property="typeId"/>
+        <result column="type_name" property="typeName"/>
+        <result column="is_limit" property="isLimit"/>
+        <result column="description" property="description"/>
+        <result column="status" property="status"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_project" property="createProject"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="level" property="level"/>
+    </resultMap>
+
+    <!-- tenantResource查询映射结果 -->
+    <resultMap id="tenantResourceResultMap" type="com.fitmgr.admin.api.vo.TenantResourcePoolVO">
+        <result column="tenant_id" property="tenantId"/>
+        <result column="resource_pool_code" property="resourcePoolCode"/>
+        <result column="resource_pool_id" property="resourcePoolId"/>
+    </resultMap>
+
+    <resultMap id="TenantProjectUserResultMap" type="com.fitmgr.admin.api.vo.TenantProjectUserVO">
+        <id column="tenant_id" property="tenantId"/>
+        <result column="tenant_name" property="tenantName"/>
+        <result column="project_id" property="projectId"/>
+        <result column="project_name" property="projectName"/>
+        <result column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+    </resultMap>
+
+    <resultMap id="TenantMemberResultMap" type="com.fitmgr.admin.api.vo.Member">
+        <result column="user_id" property="userId"/>
+        <result column="name" property="name" />
+        <result column="phone" property="phone" />
+        <result column="email" property="email" />
+        <result column="role_id" property="roleId" />
+        <result column="role_name" property="roleName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, type_id, resource_type, description, status, parent_id, create_project ,create_time, update_time, del_flag,level
+    </sql>
+
+    <select id="selectListByCondition" resultMap="tenantVoResultMap">
+        SELECT
+        t.id,t.NAME,t.english_name,t.type_id,tt.type_name,t.description,t.STATUS,t.parent_id,t.create_time,t.create_project,t.del_flag,tt.is_limit, t.level
+        FROM tenant t
+        LEFT JOIN tenant_type tt ON t.type_id = tt.id AND tt.del_flag = 0
+        <where>
+            <if test="tenantDTO.id != null ">
+                and t.id = #{tenantDTO.id}
+            </if>
+            <if test="tenantDTO.tenantIds != null and tenantDTO.tenantIds.size()>0">
+                and t.id in
+                <foreach item="item" collection="tenantDTO.tenantIds" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="tenantDTO.typeId != null ">
+                and t.type_id = #{tenantDTO.typeId}
+            </if>
+            <if test="tenantDTO.status != null and tenantDTO.status != ''">
+                and t.status = #{tenantDTO.status}
+            </if>
+            <if test="tenantDTO.name != null and tenantDTO.name != ''">
+                and t.name like CONCAT('%',#{tenantDTO.name},'%')
+            </if>
+            <if test="tenantDTO.isLimit != null and tenantDTO.isLimit != ''">
+                and tt.is_limit = #{tenantDTO.isLimit}
+            </if>
+            and t.del_flag = 0
+        </where>
+        order by t.create_time desc
+    </select>
+
+    <select id="selectListByConditionNoPage" resultMap="tenantVoResultMap">
+        SELECT
+        t.id,t.NAME,t.english_name,t.type_id,tt.type_name,t.description,t.STATUS,t.parent_id,t.create_time,t.create_project,t.del_flag,tt.is_limit, t.level
+        FROM tenant t
+        LEFT JOIN tenant_type tt ON t.type_id = tt.id AND tt.del_flag = 0
+        <where>
+            <if test="tenantDTO.id != null ">
+                and t.id = #{tenantDTO.id}
+            </if>
+            <if test="tenantDTO.tenantIds != null and tenantDTO.tenantIds.size()>0">
+                and t.id in
+                <foreach item="item" collection="tenantDTO.tenantIds" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="tenantDTO.typeId != null ">
+                and t.type_id = #{tenantDTO.typeId}
+            </if>
+            <if test="tenantDTO.status != null and tenantDTO.status != ''">
+                and t.status = #{tenantDTO.status}
+            </if>
+            <if test="tenantDTO.name != null and tenantDTO.name != ''">
+                and t.name like CONCAT('%',#{tenantDTO.name},'%')
+            </if>
+            <if test="tenantDTO.isLimit != null and tenantDTO.isLimit != ''">
+                and tt.is_limit = #{tenantDTO.isLimit}
+            </if>
+            and t.del_flag = 0
+        </where>
+        order by t.id
+    </select>
+
+    <select id="selectTenantVoById" parameterType="integer" resultMap="tenantVoResultMap">
+        SELECT t.id,t.NAME,t.english_name,t.type_id,tt.type_name,t.description,t.STATUS,t.parent_id,t.create_time,t.create_project,t.del_flag,tt.is_limit, t.level
+        FROM tenant t
+        LEFT JOIN tenant_type tt ON t.type_id = tt.id AND tt.del_flag = 0
+        where t.id = #{tenantId} and t.del_flag = 0
+    </select>
+
+    <select id="selectByUserId" resultMap="tenantVoResultMap">
+        select t.id, t.name, t.english_name,t.type_id, t.description, t.status, t.parent_id, t.create_time, t.del_flag, t.level
+        from tenant t inner join user u on t.id = u.tenant_id and u.del_flag = 0
+        where u.id = #{userId} and t.del_flag = 0
+    </select>
+
+    <select id="getTenantStatus" resultType="java.lang.String">
+        select status from tenant where id = #{tenantId}
+    </select>
+
+    <select id="translation" resultMap="TenantProjectUserResultMap">
+        SELECT distinct
+            a.tenant_id,
+            a.tenant_name,
+            a.project_id,
+            a.project_name,
+            b.user_id,
+            b.user_name
+        FROM
+        (SELECT
+	        t.id tenant_id,
+	        t.`name` tenant_name,
+	        p.id project_id,
+            p.`name` project_name
+        FROM
+	        tenant t,
+            project p
+        WHERE
+	        t.id = p.tenant_id
+            ) a,
+        (SELECT
+            urp.project_id,
+            u.id user_id,
+            u.`name` user_name
+        FROM
+            `user` u,
+            user_role_project urp
+        WHERE
+            u.id = urp.user_id
+            AND urp.project_id IS NOT NULL
+        GROUP BY
+            urp.project_id,
+            u.id,
+            u.`name`
+            ) b
+        WHERE
+            a.project_id = b.project_id
+            AND a.tenant_id = #{tenantId}
+            AND a.project_id = #{projectId}
+            AND b.user_id = #{userId}
+    </select>
+
+    <select id="selectBindList" resultMap="tenantResourceResultMap">
+        select tenant_id, resource_pool_code,resource_pool_id
+        from tenant_resource_pool
+        where tenant_id = #{tenantId} and resource_pool_code = #{resourcePoolCode}
+    </select>
+    <select id="translationNoProject" resultType="com.fitmgr.admin.api.vo.TenantProjectUserVO">
+         SELECT
+	        distinct t.id tenant_id,
+	        t.`name` tenant_name,
+	        u.id user_id,
+	        u.name user_name
+        FROM
+	        user u
+	        inner join user_role_project urp on u.id=urp.user_id and u.del_flag=0
+	        inner join tenant t on urp.tenant_id=t.id and t.del_flag=0
+	    where t.id = #{tenantId}
+	    AND u.id =#{userId}
+    </select>
+
+    <!--    <insert id="bindList" parameterType="java.util.List">-->
+    <!--        insert into tenant_resource_pool (tenant_id,resource_pool_id,resource_pool_code) values-->
+    <!--        <foreach collection="list" item="item" index="index" separator=",">-->
+    <!--            (#{item.tenantId},#{item.resourcePoolId},#{item.resourcePoolCode})-->
+    <!--        </foreach>-->
+    <!--    </insert>-->
+    <insert id="bind" parameterType="com.fitmgr.admin.api.entity.TenantResourcePool">
+        insert into tenant_resource_pool (tenant_id,resource_pool_id,resource_pool_code) values (#{tenantId},#{resourcePoolId},#{resourcePoolCode})
+
+    </insert>
+
+    <delete id="quitBind" parameterType="com.fitmgr.admin.api.entity.TenantResourcePool">
+        delete from tenant_resource_pool where tenant_id = #{tenantId} and resource_pool_id = #{resourcePoolId} and resource_pool_code = #{resourcePoolCode}
+    </delete>
+
+    <select id="listMember" resultMap="TenantMemberResultMap">
+        select u.id as user_id,u.name,u.phone,u.email,r.id as role_id,role_name
+			from user_role_project urp
+			inner join user u on u.id = urp.user_id and u.del_flag = 0
+			inner join role r on r.id = urp.role_id and r.del_flag = 0
+			where urp.tenant_id = #{tenantId}
+            <if test="status != null and status != ''">
+                and u.status = #{status}
+            </if>
+    </select>
+
+    <insert id="addMember" parameterType="java.util.List">
+        insert into user_role_project (user_id,role_id,tenant_id,project_id) values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.userId},#{item.roleId},#{item.tenantId},-1)
+        </foreach>
+    </insert>
+
+    <delete id="removeMember" parameterType="com.fitmgr.admin.api.entity.UserRoleProject">
+        delete from user_role_project where user_id = #{userRoleProject.userId} and tenant_id = #{userRoleProject.tenantId}
+    </delete>
+
+    <!-- 分页查询租户成员 -->
+    <select id="listMemberPage" resultMap="TenantMemberResultMap">
+        select distinct(u.id) as user_id,u.name,u.phone,u.email
+			from user_role_project urp
+			inner join user u on u.id = urp.user_id and u.del_flag = 0
+			where urp.tenant_id = #{tenantId}
+    </select>
+
+    <!-- 不分页查询租户成员 -->
+    <select id="listMemberByName" resultMap="TenantMemberResultMap">
+        select distinct(u.id) as user_id,u.name,u.phone,u.email
+        from user_role_project urp
+        inner join user u on u.id = urp.user_id and u.del_flag = 0
+        where 1=1
+        <if test="tenantId != null">
+            and urp.tenant_id = #{tenantId}
+        </if>
+        <if test="name != null and name != ''">
+            and u.name like CONCAT('%',#{name},'%')
+        </if>
+    </select>
+
+    <!-- 不分页查询租户成员 -->
+    <select id="allListMemberByName" resultMap="TenantMemberResultMap">
+        select distinct(u.id) as user_id,u.name,u.phone,u.email
+        from user_role_project urp
+        inner join user u on u.id = urp.user_id and u.del_flag = 0
+        where 1=1
+        <if test="tenantIds != null">
+            and urp.tenant_id in
+            <foreach collection="tenantIds" item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test="name != null and name != ''">
+            and u.name like CONCAT('%',#{name},'%')
+        </if>
+    </select>
+</mapper>

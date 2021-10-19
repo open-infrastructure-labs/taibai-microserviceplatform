@@ -1,0 +1,79 @@
+server:
+  port: 4000
+
+spring:
+  application:
+    name: @artifactId@
+  # 配置中心
+  cloud:
+    config:
+      fail-fast: true
+      name: ${spring.application.name}
+      profile: ${spring.profiles.active}
+      uri: http://fitmgr-config:8888/
+#      discovery:
+#        enabled: true
+#        service-id: fitmgr-config
+  autoconfigure:
+    exclude: org.springframework.cloud.gateway.config.GatewayAutoConfiguration,org.springframework.cloud.gateway.config.GatewayClassPathWarningAutoConfiguration
+  profiles:
+    active: dev
+
+
+
+# ribbon configuration
+ribbon:
+  # 请求连接的超时
+  ConnectTimeout: 10000
+  # 请求处理的超时时间
+  ReadTimeout: 10000
+  MaxAutoRetries: 1 #最大重试次数，当Eureka中可以找到服务，但是服务连不上时将会重试
+  MaxAutoRetriesNextServer: 3 #切换实例的重试次数
+  OkToRetryOnAllOperations: true # 对所有的操作请求都进行重试
+# 熔断器设置 HystrixCommandProperties
+hystrix:
+  threadpool:
+    default:
+      # 并发执行的最大线程数，默认10
+      coreSize: 1000
+      maximumSize: 1000
+      allowMaximumSizeToDivergeFromCoreSize: true
+      # BlockingQueue的最大队列数
+      maxQueueSize: 1000
+      # 即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+      queueSizeRejectionThreshold: 1000
+  command:
+    default:
+      # 是否开启通过请求缓存提供去重复数据功能。 默认为true
+      requestCache:
+        enabled: false
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          strategy: SEMAPHORE
+          semaphore:
+            maxConcurrentRequests: 1000
+          thread:
+            #设置超时熔断时间 15秒
+            timeoutInMilliseconds: 30000
+      # 短路限制数量
+      circuitBreaker:
+        requestVolumeThreshold: 1000
+      fallback:
+        isolation:
+          semaphore:
+            maxConcurrentRequests: 1000
+
+xxl:
+  job:
+    admin:
+      addresses: http://fitmgr-job:8080/fitmgr-job
+    accessToken:
+    executor:
+      appname: fitmgr-admin-biz
+      address:
+      ip:
+      port: 3301
+      logpath: /data/applogs/xxl-job/jobhandler
+      logretentiondays: 30

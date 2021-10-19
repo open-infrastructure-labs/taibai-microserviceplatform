@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitmgr.admin.mapper.TenantServiceMapper">
+    <!-- 批量新增 -->
+    <insert id="insertBatch">
+        INSERT INTO tenant_service
+        (tenant_id, service_id)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item}, #{serviceId}
+            )
+        </foreach>
+    </insert>
+
+    <delete id="deleteByServiceId" parameterType="String">
+        DELETE
+        FROM tenant_service
+        WHERE service_id = #{serviceId}
+    </delete>
+</mapper>

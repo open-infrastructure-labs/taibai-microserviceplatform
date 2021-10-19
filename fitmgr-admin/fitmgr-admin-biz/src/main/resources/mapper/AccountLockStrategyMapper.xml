@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitmgr.admin.mapper.AccountLockStrategyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fitmgr.admin.api.entity.AccountLockStrategy">
+        <id column="id" property="id"/>
+        <result column="support_lock" property="supportLock"/>
+        <result column="max_fail_num" property="maxFailNum"/>
+        <result column="lock_time_out" property="lockTimeOut"/>
+        <result column="unlock_type" property="unlockType"/>
+    </resultMap>
+
+</mapper>

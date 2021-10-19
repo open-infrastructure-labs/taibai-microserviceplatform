@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitmgr.admin.mapper.ProjectMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fitmgr.admin.api.entity.Project">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="description" property="description" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="status" property="status" />
+        <result column="business" property="business" />
+        <result column="is_default" property="isDefault" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="del_flag" property="delFlag" />
+        <result column="ex_project_id" property="exProjectId" />
+        <result column="coss_id" property="cossId" />
+    </resultMap>
+
+    <!-- ProjectVO查询映射结果 -->
+    <resultMap id="ProjectVOResultMap" type="com.fitmgr.admin.api.vo.ProjectVO">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="description" property="description" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="tenantName" property="tenantName" />
+        <result column="status" property="status" />
+        <result column="business" property="business" />
+        <result column="is_default" property="isDefault" />
+        <result column="create_time" property="createTime" />
+        <result column="del_flag" property="delFlag" />
+        <result column="pq_admin" property="pqAdmin" />
+        <result column="pq_admin_id" property="pqAdminId" />
+        <result column="type_name" property="typeName" />
+        <result column="is_limit" property="isLimit" />
+        <result column="ex_project_id" property="exProjectId" />
+        <result column="coss_id" property="cossId" />
+    </resultMap>
+
+    <!-- ProjectMember查询映射结果 -->
+    <resultMap id="ProjectMemberResultMap" type="com.fitmgr.admin.api.vo.Member">
+        <result column="user_id" property="userId"/>
+        <result column="name" property="name" />
+        <result column="phone" property="phone" />
+        <result column="role_id" property="roleId" />
+        <result column="role_name" property="roleName" />
+
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, description, tenant_id, status,business, create_time, update_time, del_flag
+    </sql>
+    <insert id="addMember" parameterType="java.util.List">
+        insert into user_role_project (user_id,role_id,project_id,tenant_id) values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.userId},#{item.roleId},#{item.projectId},#{item.tenantId})
+        </foreach>
+    </insert>
+    <update id="updateMemberRole">
+        update user_role_project set role_id = #{roleId} where user_id = #{userId} and project_id = #{projectId}
+    </update>
+
+    <delete id="removeMember" parameterType="com.fitmgr.admin.api.entity.UserRoleProject">
+        delete from user_role_project where user_id = #{userRoleProject.userId} and project_id = #{userRoleProject.projectId}
+    </delete>
+
+    <select id="selectProjectVoById" resultMap="ProjectVOResultMap">
+       select p.id,p.name,p.tenant_id,p.create_time,p.description,p.status,p.business,t.name as tenantName,
+			  MAX(uu.id) as pq_admin_id ,MAX(uu.name) as pq_admin ,p.del_flag,p.ex_project_id, p.coss_id
+       from project p
+       left join tenant t on p.tenant_id = t.id
+       left join (select u.id,u.username,u.`name`,r.role_code,r.role_name,urp.project_id
+                  from user u
+                  inner join user_role_project urp on urp.user_id = u.id
+                  inner join role r on r.id = urp.role_id and r.del_flag = 0 and r.role_code = "project_quota_admin"
+                  where u.del_flag = 0) uu on uu.project_id = p.id
+       where p.id = #{projectId} and p.del_flag = 0
+       group by p.id
+
+    </select>
+
+    <select id="getProjectListInfo" resultMap="ProjectVOResultMap">
+        select p.id,p.name,p.tenant_id,p.create_time,p.description,p.status,p.business,t.name as tenantName,
+        MAX(uu.id) as pq_admin_id ,MAX(uu.name) as pq_admin ,p.del_flag,p.ex_project_id, p.coss_id
+        from project p
+        left join tenant t on p.tenant_id = t.id
+        left join (select u.id,u.username,u.`name`,r.role_code,r.role_name,urp.project_id
+        from user u
+        inner join user_role_project urp on urp.user_id = u.id
+        inner join role r on r.id = urp.role_id and r.del_flag = 0 and r.role_code = "project_quota_admin"
+        where u.del_flag = 0) uu on uu.project_id = p.id
+        where p.del_flag = 0
+        group by p.id
+    </select>
+
+    <select id="listByCondition" resultMap="ProjectVOResultMap">
+        select p.id,p.name,p.tenant_id,p.create_time,p.description,p.status,p.business,t.name as tenantName,tt.type_name,tt.is_limit,
+        MAX(uu.id) as pq_admin_id ,MAX(uu.name) as pq_admin ,p.del_flag, p.ex_project_id, p.coss_id
+        from project p
+        left join tenant t on p.tenant_id = t.id and t.del_flag = 0
+        left join tenant_type tt on tt.id = t.type_id and tt.del_flag = 0
+        left join (select u.id,u.username,u.`name`,r.role_code,r.role_name,urp.project_id
+                    from user u
+                    inner join user_role_project urp on urp.user_id = u.id
+                    inner join role r on r.id = urp.role_id and r.del_flag = 0 and r.role_code = "project_quota_admin"
+        where u.del_flag = 0) uu on uu.project_id = p.id
+        <where>
+            <if test="projectDTO.id != null">
+                and p.id = #{projectDTO.id}
+            </if>
+            <if test="projectDTO.ids != null and projectDTO.ids.size()>0">
+                and p.id in
+                <foreach collection="projectDTO.ids" item="item" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="projectDTO.name != null and projectDTO.name != ''">
+                and p.name like CONCAT('%',#{projectDTO.name},'%')
+            </if>
+            <if test="projectDTO.tenantId != null">
+                and p.tenant_id = #{projectDTO.tenantId}
+            </if>
+            <if test="projectDTO.tenantIds != null and projectDTO.tenantIds.size()>0">
+                and p.tenant_id in
+                <foreach collection="projectDTO.tenantIds" item="item" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="projectDTO.isLimit != null and projectDTO.isLimit != ''">
+                and tt.is_limit = #{projectDTO.isLimit}
+            </if>
+            <if test="projectDTO.typeId != null">
+                and tt.id = #{projectDTO.typeId}
+            </if>
+            and p.del_flag = 0
+        </where>
+        group by p.id
+        order by p.create_time desc
+    </select>
+
+    <!-- 分页查询project成员 -->
+    <select id="listMemberPage" resultMap="ProjectMemberResultMap">
+        select distinct(u.id) as user_id,u.name,u.phone
+			from user_role_project urp
+			inner join user u on u.id = urp.user_id and u.del_flag = 0
+			where urp.project_id = #{projectId}
+    </select>
+
+    <!-- 不分页查询project成员 -->
+    <select id="listMemberByName" resultMap="ProjectMemberResultMap">
+        select distinct(u.id) as user_id,u.name,u.phone
+        from user_role_project urp
+        inner join user u on u.id = urp.user_id and u.del_flag = 0
+        where 1=1
+        <if test="projectId != null">
+            and urp.project_id = #{projectId}
+        </if>
+        <if test="name != null and name != ''">
+            and u.name like CONCAT('%',#{name},'%')
+        </if>
+    </select>
+
+    <select id="listMember" resultMap="ProjectMemberResultMap">
+        select u.id as user_id,u.name,u.phone,r.id as role_id,role_name
+			from user_role_project urp
+			inner join user u on u.id = urp.user_id and u.del_flag = 0
+			inner join role r on r.id = urp.role_id and r.del_flag = 0
+			where urp.project_id = #{projectId}
+    </select>
+
+    <select id="listNoPageByCondition" resultMap="BaseResultMap">
+        select distinct p.id,p.name,p.tenant_id,p.create_time,p.description,p.status,p.business,p.del_flag, p.ex_project_id, p.coss_id
+        from project p
+        <where>
+            1=1
+            <if test="projectDTO.id != null">
+                and p.id = #{projectDTO.id}
+            </if>
+            <if test="projectDTO.projectIds != null and projectDTO.projectIds.size()>0">
+                and p.id in
+                <foreach collection="projectDTO.projectIds" item="item" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="projectDTO.name != null and projectDTO.name != ''">
+                and p.name like CONCAT('%',#{projectDTO.name},'%')
+            </if>
+            <if test="projectDTO.tenantId != null">
+                and p.tenant_id = #{projectDTO.tenantId}
+            </if>
+            <if test="projectDTO.tenantIds != null and projectDTO.tenantIds.size()>0">
+                and p.tenant_id in
+                <foreach collection="projectDTO.tenantIds" item="item" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            and p.del_flag = 0
+        </where>
+        order by p.id
+    </select>
+
+</mapper>

@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitmgr.admin.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fitmgr.admin.api.entity.User">
+        <result column="id" property="id"/>
+        <result column="affiliation_type" property="affiliationType"/>
+        <result column="default_tenant_id" property="defaultTenantId"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="salt" property="salt"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="avatar" property="avatar"/>
+        <result column="email" property="email"/>
+        <result column="wx_openid" property="wxOpenid"/>
+        <result column="qq_openid" property="qqOpenid"/>
+<!--         <result column="default_role" property="defaultRole"/> -->
+        <result column="status" property="status"/>
+        <result column="last_login_time" property="lastLoginTime"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="new_import" property="newImport"/>
+    </resultMap>
+
+    <!-- UserVO查询映射结果 -->
+    <resultMap id="userVOResultMap" type="com.fitmgr.admin.api.vo.UserVO">
+        <result column="id" property="id"/>
+        <result column="affiliation_type" property="affiliationType"/>
+        <result column="default_tenant_id" property="defaultTenantId"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="avatar" property="avatar"/>
+        <result column="email" property="email"/>
+        <result column="wx_openid" property="wxOpenid"/>
+        <result column="user_type" property="userType"/>
+        <result column="qq_openid" property="qqOpenid"/>
+<!--         <result column="default_role" property="defaultRole"/> -->
+        <result column="status" property="status"/>
+        <result column="last_login_time" property="lastLoginTime"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="new_import" property="newImport"/>
+        <result column="lock_state" property="lockState"/>
+        <collection property="roleList" ofType="com.fitmgr.admin.api.entity.Role">
+            <id column="id" property="id"/>
+            <result column="role_name" property="roleName"/>
+            <result column="role_code" property="roleCode"/>
+            <result column="create_time" property="createTime"/>
+            <result column="update_time" property="updateTime"/>
+            <result column="del_flag" property="delFlag"/>
+        </collection>
+        <collection property="projectList" ofType="com.fitmgr.admin.api.entity.Project">
+            <id column="id" property="id"/>
+            <result column="name" property="name"/>
+            <result column="description" property="description"/>
+            <result column="tenant_id" property="tenantId"/>
+            <result column="status" property="status"/>
+            <result column="create_time" property="createTime"/>
+            <result column="update_time" property="updateTime"/>
+            <result column="del_flag" property="delFlag"/>
+        </collection>
+        <collection property="sysRoleList" ofType="com.fitmgr.admin.api.entity.Role">
+            <id column="id" property="id"/>
+            <result column="role_name" property="roleName"/>
+            <result column="role_code" property="roleCode"/>
+            <result column="create_time" property="createTime"/>
+            <result column="update_time" property="updateTime"/>
+            <result column="del_flag" property="delFlag"/>
+        </collection>
+
+        <collection property="tenantList" ofType="com.fitmgr.admin.api.entity.Tenant">
+            <id column="id" property="id"/>
+            <result column="name" property="name"/>
+            <result column="english_name" property="englishName"/>
+            <result column="type_id" property="typeId"/>
+            <result column="description" property="description"/>
+            <result column="status" property="status"/>
+            <result column="parent_id" property="parentId"/>
+            <result column="create_time" property="createTime"/>
+            <result column="update_time" property="updateTime"/>
+            <result column="create_project" property="createProject"/>
+            <result column="del_flag" property="delFlag"/>
+            <result column="level" property="level"/>
+        </collection>
+    </resultMap>
+
+    <!-- UserVO查询映射结果 -->
+    <resultMap id="userVOResultMapResult" type="com.fitmgr.admin.api.vo.UserVO">
+        <result column="id" property="id"/>
+        <result column="affiliation_type" property="affiliationType"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="avatar" property="avatar"/>
+        <result column="email" property="email"/>
+        <result column="wx_openid" property="wxOpenid"/>
+        <result column="qq_openid" property="qqOpenid"/>
+<!--         <result column="default_role" property="defaultRole"/> -->
+        <result column="default_tenant_id" property="defaultTenantId"/>
+        <result column="status" property="status"/>
+        <result column="last_login_time" property="lastLoginTime"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="new_import" property="newImport"/>
+        <collection property="roleList" ofType="com.fitmgr.admin.api.entity.Role">
+            <id column="rol_id" property="id"/>
+            <result column="role_name" property="roleName"/>
+            <result column="role_code" property="roleCode"/>
+            <result column="create_time" property="createTime"/>
+            <result column="update_time" property="updateTime"/>
+            <result column="del_flag" property="delFlag"/>
+        </collection>
+    </resultMap>
+
+    <!-- UserVO 分页查询映射结果 -->
+    <resultMap id="userVOListResultMap" type="com.fitmgr.admin.api.vo.UserVO">
+        <result column="id" property="id"/>
+        <result column="affiliation_type" property="affiliationType"/>
+        <result column="default_tenant_id" property="defaultTenantId"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="avatar" property="avatar"/>
+        <result column="email" property="email"/>
+        <result column="user_type" property="userType"/>
+        <result column="wx_openid" property="wxOpenid"/>
+        <result column="qq_openid" property="qqOpenid"/>
+<!--         <result column="default_role" property="defaultRole"/> -->
+        <result column="status" property="status"/>
+        <result column="last_login_time" property="lastLoginTime"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="new_import" property="newImport"/>
+        <result column="lock_state" property="lockState"/>
+    </resultMap>
+
+    <resultMap id="roleResultMap" type="com.fitmgr.admin.api.entity.Role">
+        <id column="id" property="id"/>
+        <result column="role_name" property="roleName"/>
+        <result column="role_code" property="roleCode"/>
+        <result column="description" property="description"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="sys_role" property="sysRole"/>
+        <result column="inherit_id" property="inheritId"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="level" property="level"/>
+        <result column="tenant_default_role" property="tenantDefaultRole"/>
+        <result column="project_default_role" property="projectDefaultRole"/>
+    </resultMap>
+
+    <resultMap id="projectResultMap" type="com.fitmgr.admin.api.entity.Project">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="description" property="description" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="status" property="status" />
+        <result column="business" property="business" />
+        <result column="is_default" property="isDefault" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="del_flag" property="delFlag" />
+        <result column="ex_project_id" property="exProjectId" />
+        <result column="coss_id" property="cossId" />
+    </resultMap>
+
+    <resultMap id="tenantResultMap" type="com.fitmgr.admin.api.entity.Tenant">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="english_name" property="englishName"/>
+        <result column="type_id" property="typeId"/>
+        <result column="description" property="description"/>
+        <result column="status" property="status"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_project" property="createProject"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="level" property="level"/>
+    </resultMap>
+
+    <resultMap id="tenantRoleResultMap" type="com.fitmgr.admin.api.entity.TenantRole">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="english_name" property="englishName"/>
+        <result column="type_id" property="typeId"/>
+        <result column="description" property="description"/>
+        <result column="status" property="status"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_project" property="createProject"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="level" property="level"/>
+        <result column="role_id" property="roleId"/>
+        <result column="role_name" property="roleName"/>
+    </resultMap>
+
+    <resultMap id="projectRoleResultMap" type="com.fitmgr.admin.api.entity.ProjectRole">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="description" property="description" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="status" property="status" />
+        <result column="business" property="business" />
+        <result column="is_default" property="isDefault" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="del_flag" property="delFlag" />
+        <result column="ex_project_id" property="exProjectId" />
+        <result column="coss_id" property="cossId" />
+        <result column="role_id" property="roleId"/>
+        <result column="role_name" property="roleName"/>
+    </resultMap>
+
+    <resultMap id="userCountMap" type="com.fitmgr.admin.api.entity.UserCount">
+        <result column="tenant_id" property="tenantId" />
+        <result column="project_id" property="projectId" />
+        <result column="count" property="count" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,affiliation_type,username, salt, name, phone, avatar, email, wx_openid, qq_openid, default_role,
+        default_tenant_id, status, last_login_time, create_time, update_time, del_flag, new_import
+    </sql>
+    <!-- UserVO查询结果列 -->
+    <sql id="UserVO_List">
+        id,affiliation_type, name, phone, avatar, email, wx_openid, qq_openid, default_role,
+        default_tenant_id, status, last_login_time, create_time, update_time, del_flag, new_import
+    </sql>
+
+    <select id="queryRoleByUserId" resultMap="roleResultMap">
+        SELECT DISTINCT r.id,r.role_name,r.role_code,r.create_time,r.update_time,r.del_flag,r.inherit_id,r.level
+        FROM user u
+        inner JOIN user_role_project urp ON u.id=#{userId} and u.id = urp.user_id and u.del_flag = 0
+        inner JOIN role r ON r.id = urp.role_id and r.del_flag = 0
+        ORDER BY r.inherit_id ASC
+    </select>
+
+    <select id="queryRoleByUserIdAndTenantId" resultType="Map">
+        SELECT DISTINCT urp.role_id,urp.project_id
+        FROM user_role_project urp
+        left JOIN project p on urp.project_id=p.id where urp.user_id=#{userId} and (urp.tenant_id = #{tenantId} or p.tenant_id = #{tenantId})
+    </select>
+
+    <select id="queryRoleByUserIdAndRoleLevel" resultMap="roleResultMap">
+        SELECT DISTINCT r.id,r.role_name,r.role_code,r.create_time,r.update_time,r.del_flag,r.inherit_id
+        FROM user u
+        inner JOIN user_role_project urp ON u.id=#{userId} and u.id = urp.user_id and u.del_flag = 0
+        inner JOIN role r ON r.id = urp.role_id and r.level=#{roleLevel} and r.del_flag = 0
+        ORDER BY r.inherit_id ASC
+    </select>
+
+    <select id="selectRoleByTenantId" resultMap="roleResultMap">
+        SELECT DISTINCT r.id,r.role_name,r.role_code,r.inherit_id
+        FROM user_role_project urp
+        inner JOIN role r ON r.id = urp.role_id and r.del_flag=0
+        WHERE urp.tenant_id = #{tenantId}
+        ORDER BY r.inherit_id ASC
+    </select>
+
+    <!-- 查询非普通用户的所有角色信息 -->
+    <select id="selectRoleByTenantIdAndRoleCode" resultType="com.fitmgr.admin.api.entity.Role">
+        SELECT DISTINCT r.id,r.role_name,r.role_code,r.inherit_id
+        FROM user u
+        LEFT JOIN user_role_project urp ON u.id = urp.user_id
+        LEFT JOIN role r ON r.id = urp.role_id
+        WHERE u.del_flag = 0 AND r.del_flag = 0
+        <if test="tenantId != null">
+            AND u.default_tenant_id = #{tenantId}
+        </if>
+        AND r.role_code != 'ordinary_user'
+        AND r.role_code != 'project_user'
+        AND r.role_code != 'tenant_ordinary_user'
+        ORDER BY r.inherit_id ASC
+    </select>
+
+    <!-- 通过userId查询project信息 -->
+    <select id="queryProjectByUserId" resultMap="projectResultMap">
+        SELECT DISTINCT p.id,p.name,p.description,p.tenant_id,p.status,p.create_time,p.update_time,p.del_flag,p.ex_project_id,p.coss_id
+        FROM project p
+        inner JOIN user_role_project urp ON urp.user_id=#{userId} and p.id = urp.project_id and p.del_flag = 0
+    </select>
+
+    <select id="queryProjectRoleByUserId" resultMap="projectRoleResultMap">
+        SELECT DISTINCT p.id,p.name,p.description,p.tenant_id,p.status,p.create_time,p.update_time,p.del_flag, r.id as role_id, r.role_name
+        FROM project p
+        inner JOIN user_role_project urp ON urp.user_id=#{userId} and p.id = urp.project_id and p.del_flag = 0
+        inner join role r on urp.role_id=r.id and r.del_flag=0
+    </select>
+
+    <select id="queryTenantRoleByUserId" resultType="com.fitmgr.admin.api.entity.TenantRole">
+        SELECT DISTINCT t.id,t.name,t.english_name,t.type_id,t.description,t.status,t.parent_id,t.create_time, t.update_time, t.create_project, t.del_flag, t.level, r.id as role_id, r.role_name
+        FROM tenant t
+        inner JOIN user_role_project urp ON urp.user_id=#{userId} and t.id = urp.tenant_id and urp.project_id = -1 and t.del_flag = 0
+        inner join role r on urp.role_id=r.id and r.del_flag=0
+    </select>
+
+    <select id="queryTenantByUserId" resultMap="tenantResultMap">
+        SELECT DISTINCT t.id,t.name,t.english_name,t.type_id,t.description,t.status,t.parent_id,t.create_time, t.update_time, t.create_project, t.del_flag, t.level
+        FROM tenant t
+        inner JOIN user_role_project urp ON urp.user_id=#{userId} and t.id = urp.tenant_id and t.del_flag = 0
+    </select>
+
+    <!--通过userId查询userVO用户信息-->
+    <!--通过结果中的tenant_id,查询tenantName,赋值给userVO.tenantName-->
+    <!--roleList,projectList 接着进行赋值-->
+    <select id="queryDetailsByUserId" resultMap="userVOResultMap">
+        SELECT id,affiliation_type,username,name,phone,avatar,email,wx_openid,qq_openid,default_role,default_tenant_id,user_type,
+        status,last_login_time,create_time,update_time,lock_state
+        FROM  `user`
+        WHERE id = #{userId} and del_flag = 0;
+    </select>
+
+    <!-- 通过tenantId查询所对应的tenant下的所有用户信息列表 -->
+    <select id="queryUserByTenantId" resultMap="userVOListResultMap">
+        SELECT distinct user.id,user.name,user.username,user.email,user.create_time
+        FROM `user` inner JOIN user_role_project urp ON user.id = urp.user_id and user.del_flag = 0
+        <where>
+            urp.tenant_id = #{tenantId} and user.user_type != 'SYSTEM_INTERNAL'
+            <if test="queryName != null and queryName != ''">
+                AND user.name like CONCAT('%',#{queryName},'%')
+            </if>
+        </where>
+        ORDER BY create_time DESC
+    </select>
+    <!-- 通过tenantIdList查询所对应的tenant下的所有用户信息列表 -->
+    <select id="queryUserByTenantIdList" resultMap="userVOListResultMap">
+        SELECT us.id,us.name
+        FROM `user` as us
+        left join user_role_project as ur
+        on us.id = ur.user_id
+        left join tenant as te
+        on ur.tenant_id = te.id
+        <where>
+            us.del_flag = 0 and us.user_type != 'SYSTEM_INTERNAL'
+            <if test="tenantIdList != null and tenantIdList.size()>0">
+                AND te.id in
+                <foreach item="tenantId" collection="tenantIdList" open="(" separator="," close=")">
+                    #{tenantId}
+                </foreach>
+            </if>
+        </where>
+        ORDER BY us.create_time DESC
+    </select>
+    <!-- 通过tenantId查询所对应的tenant下的所有用户信息列表2 -->
+    <select id="queryUserListByTenantId" resultMap="userVOListResultMap">
+        SELECT distinct user.id,user.name,user.username,user.email,user.create_time
+        FROM `user` inner JOIN user_role_project urp ON user.id = urp.user_id and user.del_flag = 0
+        WHERE urp.tenant_id = #{tenantId}
+        ORDER BY user.create_time DESC
+    </select>
+
+    <!-- 通过tenantId列表查询每个tenant下的用户数 -->
+    <select id="queryUserCountByTenantIdList" resultMap="userCountMap">
+        SELECT ur.tenant_id,count(DISTINCT(user_id)) as count
+        FROM `user_role_project` ur
+        <where>
+            1=1
+            <if test="tenantIdList != null and tenantIdList.size()>0">
+                AND ur.tenant_id in
+                <foreach item="tenantId" collection="tenantIdList" open="(" separator="," close=")">
+                    #{tenantId}
+                </foreach>
+            </if>
+        </where>
+        GROUP BY ur.tenant_id
+    </select>
+
+    <!-- 通过projectId列表查询每个project下的用户数 -->
+    <select id="queryUserCountByProjectIdList" resultMap="userCountMap">
+        SELECT ur.project_id,count(DISTINCT(user_id)) as count
+        FROM `user_role_project` ur
+        <where>
+            1=1
+            <if
+                test="projectIdList != null and projectIdList.size()>0">
+                AND ur.project_id in
+                <foreach item="projectId" collection="projectIdList" open="(" separator="," close=")">
+                    #{projectId}
+                </foreach>
+            </if>
+        </where>
+        GROUP BY ur.project_id
+    </select>
+
+    <!-- 通过project_id 查询用户信息列表 -->
+    <select id="queryUserByProjectId" resultMap="userVOResultMap">
+        SELECT distinct u.name,u.phone,u.username,u.email
+        FROM user u
+        inner JOIN user_role_project urp ON u.id = urp.user_id and u.del_flag=0
+        WHERE urp.id = #{projectId};
+    </select>
+
+    <!-- 根据条件分页查询-方案3 -->
+    <select id="selectListByCondition" resultMap="userVOListResultMap">
+        SELECT distinct u.`id`,u.name,u.username,u.default_tenant_id,u.default_role,u.`status`,u.email,u.phone,u.create_time,u.lock_state,u.user_type
+        FROM `user` u left join user_role_project urp on u.id = urp.user_id
+        <where>
+            u.del_flag = 0 and u.user_type != 'SYSTEM_INTERNAL'
+            <if test="userDTO.tenantIds != null and userDTO.tenantIds.size()>0">
+                and urp.tenant_id in
+                <foreach item="item" collection="userDTO.tenantIds" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="userDTO.projectIds != null and userDTO.projectIds.size()>0">
+                and urp.project_id in
+                <foreach item="item" collection="userDTO.projectIds" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="userDTO.tenantId != null">
+                and urp.tenant_id = #{userDTO.tenantId}
+            </if>
+            <if test="userDTO.projectId != null">
+                and urp.project_id = #{userDTO.projectId}
+            </if>
+            <if test="userDTO.id != null and userDTO.id != ''">
+                and u.id = #{userDTO.id}
+            </if>
+            <if test="userDTO.userIds != null and userDTO.userIds.size()>0">
+                and u.id not in
+                <foreach collection="userDTO.userIds" item="item" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="userDTO.name != null and userDTO.name != ''">
+                and u.name like CONCAT('%',#{userDTO.name},'%')
+            </if>
+            <if test="userDTO.username != null and userDTO.username != ''">
+                and u.username like CONCAT('%',#{userDTO.username},'%')
+            </if>
+            <if test="userDTO.email != null and userDTO.email != ''">
+                and u.email like CONCAT('%',#{userDTO.email},'%')
+            </if>
+            <if test="userDTO.status != null and userDTO.status != ''">
+                and u.status = #{userDTO.status}
+            </if>
+        </where>
+        ORDER BY u.create_time DESC
+    </select>
+    <select id="selectListByProjectCondition" resultMap="userVOListResultMap">
+        SELECT distinct u.`id`,u.name,u.username,u.default_tenant_id,u.default_role,u.`status`,u.email,u.phone,u.create_time,u.lock_state,u.user_type
+        FROM `user` u left join user_role_project urp on u.id = urp.user_id
+        <where>
+            u.del_flag = 0 and u.user_type != 'SYSTEM_INTERNAL'
+            and (1=2
+            <if test="authCheck.projectIds != null and authCheck.projectIds.size()>0">
+                or urp.project_id in
+                <foreach item="item" collection="authCheck.projectIds" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="authCheck.projectOperatingRanges != null and authCheck.projectOperatingRanges.size()>0">
+                <foreach item="item" collection="authCheck.projectOperatingRanges" index="index" open="" separator="" close="">
+                    or (urp.project_id = #{item.projectId} and urp.user_id = #{item.userId})
+                </foreach>
+            </if>
+            <if test="authCheck.tenantIds != null and authCheck.tenantIds.size()>0 and authCheck.userId != null">
+                <foreach item="item" collection="authCheck.tenantIds" index="index" open="" separator="" close="">
+                    or (urp.tenant_id = #{item} and urp.user_id = #{authCheck.userId})
+                </foreach>
+            </if>
+            )
+            <if test="userDTO.tenantId != null">
+                and urp.tenant_id = #{userDTO.tenantId}
+            </if>
+            <if test="userDTO.projectId != null">
+                and urp.project_id = #{userDTO.projectId}
+            </if>
+            <if test="userDTO.id != null and userDTO.id != ''">
+                and u.id = #{userDTO.id}
+            </if>
+            <if test="userDTO.userIds != null and userDTO.userIds.size()>0">
+                and u.id not in
+                <foreach collection="userDTO.userIds" item="item" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="userDTO.name != null and userDTO.name != ''">
+                and u.name like CONCAT('%',#{userDTO.name},'%')
+            </if>
+            <if test="userDTO.username != null and userDTO.username != ''">
+                and u.username like CONCAT('%',#{userDTO.username},'%')
+            </if>
+            <if test="userDTO.email != null and userDTO.email != ''">
+                and u.email like CONCAT('%',#{userDTO.email},'%')
+            </if>
+            <if test="userDTO.status != null and userDTO.status != ''">
+                and u.status = #{userDTO.status}
+            </if>
+        </where>
+        ORDER BY u.create_time DESC
+    </select>
+
+    <select id="selectUsersListNoPageByCondition" resultMap="BaseResultMap">
+        SELECT distinct u.`id`,u.name,u.username,u.default_tenant_id,u.default_role,u.`status`,u.email,u.phone,u.create_time
+        FROM `user` u left join user_role_project urp on u.id = urp.user_id
+        <where>
+            u.del_flag = 0 and u.user_type != 'SYSTEM_INTERNAL'
+            <if test="userDTO.tenantIds != null and userDTO.tenantIds.size()>0">
+                and urp.tenant_id in
+                <foreach item="item" collection="userDTO.tenantIds" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="userDTO.projectIds != null and userDTO.projectIds.size()>0">
+                and urp.project_id in
+                <foreach item="item" collection="userDTO.projectIds" index="index" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="userDTO.id != null and userDTO.id != ''">
+                and u.id = #{userDTO.id}
+            </if>
+            <if test="userDTO.name != null and userDTO.name != ''">
+                and u.name like CONCAT('%',#{userDTO.name},'%')
+            </if>
+            <if test="userDTO.username != null and userDTO.username != ''">
+                and u.username like CONCAT('%',#{userDTO.username},'%')
+            </if>
+        </where>
+        ORDER BY u.create_time DESC
+    </select>
+
+    <!-- 通过projectId查询该project对应的tenant下的所有用户信息列表 -->
+    <select id="queryTenantUserByProjectId" resultMap="userVOResultMap">
+        SELECT u.id,u.name,u.phone,u.email
+        FROM user u
+        inner JOIN user_role_project urp on u.id = urp.user_id and u.del_flag = 0
+        inner JOIN project p ON p.id = #{projectId} and urp.tenant_id = p.tenant_id and p.del_flag = 0
+        <where>
+            <if test="queryName != null and queryName != ''">
+                AND u.name like CONCAT('%',#{queryName},'%')
+            </if>
+        </where>
+        ORDER BY u.create_time DESC
+    </select>
+
+    <!-- 通过userId查询project信息 -->
+    <select id="queryAffiliationType" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT id,affiliation_type,tenant_id,default_project
+        FROM user
+        WHERE id=#{userId} and del_flag = 0;
+    </select>
+
+
+    <!-- 用户中心信息预览,tenantNumber -->
+    <select id="queryTenantNumber" resultType="com.fitmgr.admin.api.vo.TenantVO">
+        SELECT COUNT(id) AS tenantNumber FROM tenant WHERE del_flag = 0
+    </select>
+
+    <!-- 用户中心信息预览,projectNumber -->
+    <select id="queryProjectNumber" resultType="com.fitmgr.admin.api.vo.ProjectVO">
+        SELECT COUNT(id) AS projectNumber FROM project
+        <where>
+            del_flag = 0
+            <if test="userDTO.tenantId != null and userDTO.tenantId != ''">
+                AND tenant_id = #{userDTO.tenantId}
+            </if>
+        </where>
+    </select>
+
+    <!-- 用户中心信息预览,roleNumber -->
+    <select id="queryAllRoleNumber" resultType="com.fitmgr.admin.api.vo.RoleVO">
+        SELECT COUNT(DISTINCT role_name) AS roleNumber FROM role where del_flag=0
+    </select>
+
+    <!-- 用户中心信息预览,roleNumber -->
+    <select id="queryRoleNumber" resultType="com.fitmgr.admin.api.vo.RoleVO">
+        SELECT COUNT(DISTINCT urp.role_id) AS roleNumber
+        FROM user_role_project urp
+        <where>
+            <if test="userDTO.tenantId != null and userDTO.tenantId != ''">
+                AND urp.tenant_id = #{userDTO.tenantId}
+            </if>
+            <if test="userDTO.projectId != null and userDTO.projectId != ''">
+                AND urp.project_id = #{userDTO.projectId}
+            </if>
+        </where>
+    </select>
+
+    <!-- 用户中心信息预览,userNumber -->
+    <select id="queryUserNumber" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT COUNT(distinct u.username) as userNumber
+        FROM user u
+        LEFT JOIN user_role_project urp
+        ON u.id = urp.user_id
+        <where>
+            u.del_flag = 0
+            <if test="userDTO.tenantId != null and userDTO.tenantId != ''">
+                AND urp.tenant_id = #{userDTO.tenantId}
+            </if>
+            <if test="userDTO.projectId != null and userDTO.projectId != ''">
+                AND urp.project_id = #{userDTO.projectId}
+            </if>
+        </where>
+    </select>
+    <select id="queryUserRecentlyNumber" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT distinct user.username,user.last_login_time
+        FROM user
+        LEFT JOIN user_role_project urp ON user.id = urp.user_id
+        <where>
+            del_flag = 0 AND DATE_SUB(CURDATE(), INTERVAL 6 DAY) <![CDATA[<= ]]> date(last_login_time)
+            <if test="userDTO.tenantId != null and userDTO.tenantId != ''">
+                AND urp.tenant_id = #{userDTO.tenantId}
+            </if>
+        </where>
+    </select>
+
+    <select id="queryProjectUserRecentlyNumber" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT distinct u.username,u.last_login_time
+        FROM user u
+        LEFT JOIN user_role_project urp
+        ON u.id = urp.user_id
+        <where>
+            u.del_flag = 0 AND DATE_SUB(CURDATE(), INTERVAL 6 DAY) <![CDATA[<= ]]> date(last_login_time)
+            <if test="userDTO.projectId != null and userDTO.projectId != ''">
+                AND urp.project_id = #{userDTO.projectId}
+            </if>
+        </where>
+    </select>
+    <!-- 用户中心信息预览,userNumber -->
+    <select id="queryUserInfoByRoleCode" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT u.id,u.affiliation_type,u.username,u.name,u.phone,u.email,u.default_role,u.default_tenant_id,u.status,u.last_login_time
+        FROM user u
+        inner JOIN user_role_project urp ON u.id = urp.user_id and u.del_flag = 0
+        LEFT JOIN role r ON urp.role_id = r.id and r.del_flag = 0
+        WHERE r.role_code = #{roleCode}
+            AND u.del_flag=0 and u.user_type != 'SYSTEM_INTERNAL'
+        ORDER BY u.create_time DESC
+    </select>
+
+    <!-- 通过roleCode和tenantId查询某个租户下拥有某种角色的所有用户 -->
+    <select id="queryUserInfoByRoleCodeAndTenantId" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT
+          u.id,
+          u.affiliation_type,
+          u.default_tenant_id,
+          u.username,
+          u.name,
+          u.phone,
+          u.email,
+          u.default_role,
+          u.status,
+          u.last_login_time
+        FROM USER u
+          LEFT JOIN user_role_project urp
+            ON u.id = urp.user_id
+          LEFT JOIN tenant tn
+            ON tn.id = urp.tenant_id
+          LEFT JOIN role r
+            ON urp.role_id = r.id
+        WHERE u.del_flag = 0
+            and u.user_type != 'SYSTEM_INTERNAL'
+            AND r.del_flag = 0
+            AND r.role_code = #{roleCode}
+            <if test=" tenantId != null ">
+                AND tn.id = #{tenantId}
+            </if>
+        ORDER BY u.create_time DESC
+    </select>
+    
+    <select id="queryUserInfoByRoleCodesAndTenantId" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT distinct
+          u.id,
+          u.affiliation_type,
+          u.default_tenant_id,
+          u.username,
+          u.name,
+          u.phone,
+          u.email,
+          u.default_role,
+          u.status,
+          u.last_login_time
+        FROM USER u
+          LEFT JOIN user_role_project urp
+            ON u.id = urp.user_id
+          LEFT JOIN tenant tn
+            ON tn.id = urp.tenant_id
+          LEFT JOIN role r
+            ON urp.role_id = r.id
+        WHERE u.del_flag = 0
+            and u.user_type != 'SYSTEM_INTERNAL'
+            AND r.del_flag = 0
+            AND 
+            (
+                (
+                    r.role_code  in
+                    <choose>
+                        <when test="tenRoleCodes != null and tenRoleCodes.size()>0">
+                            <foreach collection="tenRoleCodes" item="item" open="(" separator="," close=")">
+                                #{item}
+                            </foreach>
+                        </when>
+                        <otherwise>
+                            ('')
+                        </otherwise>
+                    </choose>
+                    <if test=" tenantId != null and tenantId != -1">
+                        AND tn.id = #{tenantId}
+                    </if>
+                )
+                OR
+                (
+                    r.role_code in
+                    <choose>
+                        <when test="sysRoleCodes != null and sysRoleCodes.size()>0">
+                            <foreach collection="sysRoleCodes" item="item" open="(" separator="," close=")">
+                                #{item}
+                            </foreach>
+                        </when>
+                        <otherwise>
+                            ('')
+                        </otherwise>
+                    </choose>
+                )
+            )
+        ORDER BY u.create_time DESC
+    </select>
+
+    <!-- 通过roleCode和projectId查询某个project下拥有某种角色的所有用户 -->
+    <select id="queryUserInfoByProjectIdAndRoleCode" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT
+          u.id,
+          u.affiliation_type,
+          u.default_tenant_id,
+          u.username,
+          u.name,
+          u.phone,
+          u.email,
+          u.default_role,
+          u.status,
+          u.last_login_time
+        FROM USER u
+          LEFT JOIN user_role_project urp
+            ON u.id = urp.user_id
+          LEFT JOIN project pt
+            ON pt.id = urp.project_id
+          LEFT JOIN role r
+            ON urp.role_id = r.id
+        WHERE u.del_flag = 0
+            and u.user_type != 'SYSTEM_INTERNAL'
+            AND r.del_flag = 0
+            AND r.role_code = #{roleCode}
+            AND pt.id = #{projectId}
+        ORDER BY u.create_time DESC
+    </select>
+
+    <!-- 通过租户id和name分页查询用户信息，过滤单个普通用户 -->
+    <select id="queryUserInfoByName" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT
+            u.id,
+            u.affiliation_type,
+            u.tenant_id,
+            u.username,
+            u.name,
+            u.phone,
+            u.email,
+            u.default_role,
+            u.status,
+            u.last_login_time
+        FROM user u
+        WHERE 1=1 AND u.del_flag = 0
+        <if test="name != null and name !=''">
+            AND u.name like CONCAT('%',#{name},'%')
+        </if>
+        <if test="tenantId != null">
+            AND u.tenant_id = #{tenantId}
+        </if>
+        <!-- 通过分组，过滤掉有普通用户角色 -->
+            AND u.username IN (SELECT ut.username FROM user ut
+                                 LEFT JOIN user_role_project urp
+                                   ON ut.id = urp.user_id
+                                 LEFT JOIN role r
+                                   ON urp.role_id = r.id
+                               WHERE ut.del_flag = 0
+                                   AND r.del_flag = 0
+                                   AND r.role_code != 'ordinary_user'
+                                   AND r.role_code != 'project_user'
+                                   AND r.role_code != 'tenant_ordinary_user'
+                               GROUP BY ut.username HAVING COUNT(ut.username) > 0)
+        ORDER BY u.create_time DESC
+    </select>
+
+    <!-- 通过用户主键id，查询用户对应的role的集合 -->
+    <select id="queryUserAndRoleInfoByUserIdList" resultMap="userVOResultMapResult">
+        SELECT distinct
+            u.id,
+            u.affiliation_type,
+            u.username,
+            u.name,
+            u.phone,
+            u.email,
+            u.default_role,
+            u.default_tenant_id,
+            u.status,
+            u.create_time,
+            ro.id        rol_id,
+            ro.role_name,
+            ro.role_code
+        FROM `user` u
+        LEFT JOIN user_role_project urp
+        on u.id = urp.user_id
+        LEFT JOIN role ro
+        on urp.role_id = ro.id
+        WHERE u.del_flag = 0 and u.user_type != 'SYSTEM_INTERNAL'
+        AND u.id IN
+        <foreach item="item" collection="userIdLst" index="index" open="(" separator="," close=")">#{item}</foreach>
+    </select>
+
+    <!-- 根据name+code+tenantid进行分页查询 -->
+    <select id="queryUserInfoByRoleCodePage" resultMap="userVOResultMapResult">
+        SELECT distinct
+            u.id,
+            u.affiliation_type,
+            u.username,
+            u.name,
+            u.phone,
+            u.email,
+            u.default_role,
+            u.default_tenant_id,
+            u.status,
+            u.create_time,
+            r.id        rol_id,
+            r.role_name,
+            r.role_code
+        FROM user u
+        LEFT JOIN user_role_project urp ON u.id = urp.user_id
+        LEFT JOIN role r ON urp.role_id = r.id
+        WHERE u.del_flag = 0 AND r.del_flag = 0 and u.user_type != 'SYSTEM_INTERNAL'
+        <if test="roleCode != null and roleCode !=''">
+            AND r.role_code = #{roleCode}
+        </if>
+        <if test="name != null and name !=''">
+            AND u.name like CONCAT('%',#{name},'%')
+        </if>
+        <if test="tenantId != null">
+            AND urp.tenant_id = #{tenantId}
+        </if>
+        ORDER BY u.create_time DESC
+    </select>
+
+    <!-- 根据roleCode分页查询user信息 -->
+    <select id="queryUserInfoByRoleIdAndTenantId" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT u.id,u.affiliation_type,u.username,u.name,u.phone,u.email,u.default_role,u.default_tenant_id,u.status,u.last_login_time
+        FROM user u
+        inner JOIN user_role_project urp ON urp.tenant_id = #{tenantId} and u.id = urp.user_id and u.del_flag=0
+        inner JOIN role r ON r.id = #{roleId} and urp.role_id = r.id and r.del_flag=0
+        ORDER BY u.create_time DESC ;
+    </select>
+
+    <select id="queryUserMsg" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT
+        u.id id,
+        u.NAME,
+        u.username,
+        u.phone,
+        u.email
+        FROM user u
+        WHERE 1=1 and u.user_type != 'SYSTEM_INTERNAL'
+        <if test="userIds != null and userIds.size()>0">
+            AND u.id IN
+            <foreach item="item" collection="userIds" index="index" open="(" separator="," close=")">#{item}</foreach>
+        </if>
+        AND u.del_flag=0
+    </select>
+
+    <!-- 通过用户usernames集合查询用户信息 -->
+    <select id="queryUserByUsernames" resultType="com.fitmgr.admin.api.vo.UserVO">
+        SELECT
+        u.id id,
+        u.NAME,
+        u.username,
+        u.phone,
+        u.email
+        FROM
+        `user` u
+        WHERE 1=1 AND u.del_flag=0 and u.user_type != 'SYSTEM_INTERNAL'
+        <if test="usernames != null and usernames.size()>0">
+            AND u.username IN
+            <foreach item="item" collection="usernames" index="index" open="(" separator="," close=")">#{item}</foreach>
+        </if>
+    </select>
+
+    <select id="getUserByTenant" resultType="com.fitmgr.admin.api.entity.User">
+        SELECT distinct
+        u.id,
+        u.NAME,
+        u.username
+        FROM
+        `user` u,
+        user_role_project urp,
+        role r
+        WHERE
+        u.id = urp.user_id
+        AND urp.role_id = r.id
+        AND r.role_code = #{roleCode}
+        AND urp.tenant_id = #{tpId}
+        AND u.del_flag = '0'
+        AND u.`status` = '0'
+        and u.user_type != 'SYSTEM_INTERNAL'
+    </select>
+    <select id="getUserByProject" resultType="com.fitmgr.admin.api.entity.User">
+        SELECT distinct
+        u.id,
+        u.NAME,
+        u.username
+        FROM
+        `user` u,
+        user_role_project urp,
+        role r
+        WHERE
+        u.id = urp.user_id
+        AND urp.role_id = r.id
+        AND r.role_code = #{roleCode}
+        AND urp.project_id = #{tpId}
+        AND u.del_flag = '0'
+        AND u.`status` = '0'
+        and u.user_type != 'SYSTEM_INTERNAL'
+    </select>
+
+    <update id="updateUserLoginTime">
+        UPDATE user
+        SET last_login_time = NOW()
+        WHERE del_flag = 0 AND id = #{id}
+    </update>
+
+</mapper>

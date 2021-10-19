@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fitmgr.admin.mapper.MenuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.fitmgr.admin.api.entity.Menu">
+        <id column="id" property="id"/>
+        <id column="menu_id" property="menuId"/>
+        <result column="name" property="name"/>
+        <result column="path" property="path"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="type" property="type"/>
+        <result column="title" property="title"/>
+        <result column="redirect" property="redirect"/>
+        <result column="hidden" property="hidden"/>
+        <result column="icon" property="icon"/>
+        <result column="component" property="component"/>
+        <result column="sort" property="sort"/>
+        <result column="keep_alive" property="keepAlive"/>
+        <result column="status" property="status"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="menu_order" property="menuOrder"/>
+        <result column="is_external" property="isExternal"/>
+        <result column="external_login_url" property="externalLoginUrl"/>
+        <result column="external_username" property="externalUsername"/>
+        <result column="external_pwd" property="externalPwd"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,menu_id, name, path, parent_id,type,title,redirect,hidden, icon, component, sort,keep_alive, status, create_time, update_time, del_flag, menu_order,
+        is_external, external_login_url, external_username, external_pwd
+    </sql>
+
+    <insert id="configMenuAuth">
+        insert into role_menu(role_id,menu_id)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{roleId},#{item})
+        </foreach>
+    </insert>
+    <delete id="deleteMenuAuth">
+        delete from role_menu where role_id = #{roleId}
+    </delete>
+
+    <select id="getSysMenu" resultType="com.fitmgr.admin.api.vo.MenuVO">
+        SELECT
+        m.id,m.menu_id, m.name, m.path, m.parent_id,m.type,title,redirect,m.hidden, m.icon, m.component,rm.half, m.sort,m.keep_alive, m.status, m.create_time, m.update_time, m.del_flag, m.menu_order,
+        m.is_external, m.external_login_url, m.external_username, external_pwd, m.template_id, m.is_global
+        FROM
+        role_menu rm,
+        menu m
+        WHERE
+        rm.menu_id = m.menu_id
+        AND
+        rm.role_id = #{roleId}
+        AND
+        m.del_flag=0
+        AND
+        m.status=0
+        ORDER BY create_time
+    </select>
+
+    <select id="getSysMenus" resultType="com.fitmgr.admin.api.vo.MenuVO">
+        SELECT
+        m.id,m.menu_id, m.name, m.path, m.parent_id,m.type,title,redirect,m.hidden, m.icon, m.component,rm.half, m.sort,m.keep_alive, m.status, m.create_time, m.update_time, m.del_flag, m.menu_order,
+        m.is_external, m.external_login_url, m.external_username, external_pwd, m.template_id, m.is_global
+        FROM
+        role_menu rm,
+        menu m
+        WHERE
+        rm.menu_id = m.menu_id
+        AND
+        rm.role_id in 
+        <foreach item="item" collection="roleIds" separator="," open="(" close=")" index="">
+            #{item}
+        </foreach>
+        AND
+        m.del_flag=0
+        AND
+        m.status=0
+        group by m.menu_id
+        ORDER BY create_time
+    </select>
+
+</mapper>
