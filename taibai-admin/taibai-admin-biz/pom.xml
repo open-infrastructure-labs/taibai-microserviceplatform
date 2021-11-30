@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>taibai-admin</artifactId>
+        <groupId>com.taibai</groupId>
+        <version>V1R1B010</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>taibai-admin-biz</artifactId>
+    <packaging>jar</packaging>
+
+    <description>taibai 通用用户权限管理系统业务处理模块</description>
+
+    <dependencies>
+        <!--upms api、model 模块-->
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-transaction</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-ribbon</artifactId>
+            <version>${spring-cloud-netflix-ribbon.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+            <version>${spring-cloud-openfeign-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+            <version>${spring-cloud-commons.version}</version>
+        </dependency>
+        <!--upms api、model 模块-->
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-admin-api</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <!--日志处理-->
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-log</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-quota-api</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-data</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>taibai-webpush-api</artifactId>
+            <groupId>com.taibai</groupId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <!--swagger-->
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-swagger</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <!--文件系统-->
+<!--        <dependency>-->
+<!--            <groupId>com.taibai</groupId>-->
+<!--            <artifactId>taibai-common-minio</artifactId>-->
+<!--            <version>${taibai.version}</version>-->
+<!--        </dependency>-->
+        <!--eureka 客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--配置中心客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <!--spring security 、oauth、jwt依赖-->
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-security</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <!--jwt-->
+        <!-- <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency> -->
+        <!--支持动态路由配置 -->
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-gateway</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <!--template模块-->
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-template-api</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <!--mybatis-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+        <!--数据库-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!--web 模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--undertow容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.1</version>
+        </dependency> -->
+        <!--集成logstash-->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>${logstash.version}</version>
+        </dependency>
+        <!--minio 文件存储服务-->
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-minio</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <!--代码生成器-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis-plus.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-activiti-api</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-job-api</artifactId>
+            <version>${taibai.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-xxljob</artifactId>
+            <version>2.2.0-SNAPSHOT</version>
+        </dependency> -->
+
+        <dependency>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-encrypt</artifactId>
+            <version>${taibai.version}</version>
+        </dependency>
+        
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-ldap</artifactId>
+			<version>2.3.6.RELEASE</version>
+		</dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- 指定该Main Class为全局的唯一入口 -->
+                    <mainClass>com.taibai.admin.AdminApplication</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
