@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taibai.admin.mapper.RoleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.taibai.admin.api.entity.Role">
+        <id column="id" property="id"/>
+        <result column="role_name" property="roleName"/>
+        <result column="role_code" property="roleCode"/>
+        <result column="description" property="description"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="sys_role" property="sysRole"/>
+        <result column="inherit_id" property="inheritId"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="del_flag" property="delFlag"/>
+        <result column="level" property="level"/>
+        <result column="tenant_default_role" property="tenantDefaultRole"/>
+        <result column="project_default_role" property="projectDefaultRole"/>
+        <result column="system_default_role" property="systemDefaultRole"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, role_name, role_code, description, parent_id,sys_role, inherit_id,create_user, create_time, update_time, del_flag, level, tenant_default_role, project_default_role, system_default_role
+    </sql>
+
+    <select id="countUser" resultType="java.lang.Integer">
+        SELECT COUNT(user_id) FROM user_role_project WHERE role_id= #{roleId}
+    </select>
+
+    <select id="getRoleList" resultType="com.taibai.admin.api.entity.Role">
+        SELECT distinct
+        r.id, r.role_name, r.role_code, r.description, r.parent_id, r.inherit_id,r.create_user,r.level,r.tenant_default_role,r.project_default_role, r.system_default_role
+        FROM user_role_project urp, role r WHERE urp.role_id=r.id AND urp.user_id= #{userId}
+    </select>
+
+    <select id="getRoleListByTwoId" resultType="com.taibai.admin.api.entity.Role">
+        SELECT distinct r.id,r.role_name,r.role_code,r.level,r.tenant_default_role,r.project_default_role, r.system_default_role
+        FROM user u
+        inner JOIN user_role_project urp ON u.id = #{userId} AND urp.project_id = #{projectId} and u.id = urp.user_id and u.del_flag = 0
+        LEFT JOIN role r ON r.id = urp.role_id AND r.del_flag = 0
+    </select>
+
+    <select id="getRoleListByUserIdAndTenantId" resultType="com.taibai.admin.api.entity.Role">
+        SELECT distinct r.id,r.role_name,r.role_code,r.level,r.tenant_default_role,r.project_default_role, r.system_default_role, r.inherit_id
+        FROM role r
+        inner JOIN user_role_project urp ON urp.tenant_id = #{tenantId} and r.id = urp.role_id AND r.del_flag = 0
+        inner JOIN user u ON u.id = #{userId} and u.id = urp.user_id and u.del_flag = 0
+        order by r.inherit_id
+    </select>
+
+    <select id="getProjectRoleListByUserIdAndTenantId" resultType="com.taibai.admin.api.entity.Role">
+        SELECT distinct r.id,r.role_name,r.role_code,r.level,r.tenant_default_role,r.project_default_role, r.system_default_role, r.inherit_id
+        FROM role r
+        inner JOIN user_role_project urp ON r.id = urp.role_id AND r.del_flag = 0
+        inner JOIN project p on p.id = urp.project_id and p.tenant_id=#{tenantId} and p.del_flag=0
+        inner JOIN user u ON u.id = #{userId} and u.id = urp.user_id and u.del_flag = 0
+        order by r.inherit_id
+    </select>
+
+    <delete id="deleteByRoleId" parameterType="java.lang.Integer">
+        delete from role where id = #{roleId}
+    </delete>
+
+</mapper>

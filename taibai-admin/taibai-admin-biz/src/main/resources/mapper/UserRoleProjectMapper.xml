@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taibai.admin.mapper.UserRoleProjectMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.taibai.admin.api.entity.UserRole">
+        <result column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="role_id" property="roleId"/>
+        <result column="project_id" property="projectId"/>
+        <result column="tenant_id" property="tenantId"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,user_id, role_id,project_id,tenant_id
+    </sql>
+
+    <!--根据 userId 删除该用户的角色关系-->
+    <delete id="deleteByUserId">
+		DELETE FROM user_role WHERE user_id = #{userId}
+	</delete>
+
+    <!--删除指定用户在指定project中指定的角色-->
+    <delete id="deleteUserRole">
+        delete from user_role_project where user_id = #{userId} and project_id = #{projectId} and role_id = #{roleId}
+    </delete>
+
+    <!--查询当前用户角色对应的用户信息-->
+    <select id="selectSwitchUser" resultType="com.taibai.admin.api.entity.User">
+        SELECT
+        u.id,
+        u.`username`,
+        u.tenant_id,
+        urp.role_id as default_role,
+        urp.project_id as default_project
+        FROM
+        user_role_project urp,
+        user u
+        WHERE
+        urp.user_id = u.id
+        <if test="projcetId != null and projcetId != ''">
+            AND urp.project_id = #{projcetId}
+        </if>
+        <if test="roleId != null and roleId != ''">
+            AND urp.role_id = #{roleId}
+        </if>
+        AND u.id = #{userId}
+    </select>
+
+
+</mapper>

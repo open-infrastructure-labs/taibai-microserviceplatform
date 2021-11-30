@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taibai.admin.mapper.SessionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.taibai.admin.api.entity.Session">
+        <id column="id" property="id"/>
+        <result column="token" property="token"/>
+        <result column="user_id" property="userId"/>
+        <result column="login_time" property="loginTime"/>
+        <result column="ip" property="ip"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="timeout" property="timeout"/>
+    </resultMap>
+
+    <resultMap id="sessionPageResultMap" type="com.taibai.admin.api.vo.SessionVO">
+        <id column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="username" property="account"/>
+        <result column="name" property="userName"/>
+        <result column="login_time" property="loginTime"/>
+        <result column="ip" property="ip"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="timeout" property="timeout"/>
+    </resultMap>
+
+    <select id="selectSessionByPage" resultMap="sessionPageResultMap">
+        SELECT s.`id`,s.user_id,s.login_time,s.ip,s.create_time,s.update_time,s.timeout,u.name,u.username
+        FROM `session` s left join user u on u.id = s.user_id
+        <where>
+            <if test="sessionDTO.account != null and sessionDTO.account != ''">
+                and u.username like CONCAT('%',#{sessionDTO.account},'%')
+            </if>
+            <if test="sessionDTO.userName != null and sessionDTO.userName != ''">
+                and u.name like CONCAT('%',#{sessionDTO.userName},'%')
+            </if>
+        </where>
+        ORDER BY s.create_time DESC
+    </select>
+
+    <select id="innerSelectSessionByPage" resultMap="BaseResultMap">
+        SELECT s.`id`,s.token, s.user_id,s.login_time,s.ip,s.create_time,s.update_time,s.timeout
+        FROM `session` s
+    </select>
+    
+    <select id="selectSessions" resultMap="sessionPageResultMap">
+        SELECT s.`id`,s.user_id,s.login_time,s.ip,s.create_time,s.update_time,s.timeout,u.name,u.username
+        FROM `session` s left join user u on u.id = s.user_id
+        <where>
+            <if test="sessionDTO.account != null and sessionDTO.account != ''">
+                and u.username like CONCAT('%',#{sessionDTO.account},'%')
+            </if>
+            <if test="sessionDTO.userName != null and sessionDTO.userName != ''">
+                and u.name like CONCAT('%',#{sessionDTO.userName},'%')
+            </if>
+        </where>
+        ORDER BY s.create_time DESC
+    </select>
+</mapper>

@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.taibai.job.api.conf.FitmgrJobConfig,com.taibai.job.api.sdk.FhJobApiController
+org.springframework.cloud.bootstrap.BootstrapConfiguration=com.taibai.common.log.systemlog.CustomPropertySourceLocator
