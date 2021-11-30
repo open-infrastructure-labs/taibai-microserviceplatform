@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.mobile;
+package com.taibai.common.security.mobile;
 
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -9,8 +9,8 @@ import org.springframework.security.core.SpringSecurityMessageSource;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsChecker;
 
-import com.fitmgr.common.security.component.PreAuthenticationChecks;
-import com.fitmgr.common.security.service.FitmgrUserDetailsService;
+import com.taibai.common.security.component.PreAuthenticationChecks;
+import com.taibai.common.security.service.FitmgrUserDetailsService;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +18,7 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/8/5 手机登录校验逻辑 验证码登录、社交登录
  */
 @Slf4j

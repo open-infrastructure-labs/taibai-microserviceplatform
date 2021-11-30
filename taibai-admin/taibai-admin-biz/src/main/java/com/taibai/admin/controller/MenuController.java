@@ -1,5 +1,5 @@
 
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,24 +21,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.fitmgr.admin.api.dto.MenuDTO;
-import com.fitmgr.admin.api.entity.Menu;
-import com.fitmgr.admin.api.entity.MenuOrder;
-import com.fitmgr.admin.api.entity.RoleMenu;
-import com.fitmgr.admin.api.entity.Subpage;
-import com.fitmgr.admin.api.entity.TenantService;
-import com.fitmgr.admin.api.vo.MenuVO;
-import com.fitmgr.admin.mapper.TenantServiceMapper;
-import com.fitmgr.admin.service.IMenuService;
-import com.fitmgr.admin.service.IRoleMenuService;
-import com.fitmgr.admin.service.IUserService;
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.util.IdGen;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.log.annotation.SysLog;
-import com.fitmgr.common.security.service.FitmgrUser;
-import com.fitmgr.common.security.util.SecurityUtils;
+import com.taibai.admin.api.dto.MenuDTO;
+import com.taibai.admin.api.entity.Menu;
+import com.taibai.admin.api.entity.MenuOrder;
+import com.taibai.admin.api.entity.RoleMenu;
+import com.taibai.admin.api.entity.Subpage;
+import com.taibai.admin.api.entity.TenantService;
+import com.taibai.admin.api.vo.MenuVO;
+import com.taibai.admin.mapper.TenantServiceMapper;
+import com.taibai.admin.service.IMenuService;
+import com.taibai.admin.service.IRoleMenuService;
+import com.taibai.admin.service.IUserService;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.util.IdGen;
+import com.taibai.common.core.util.R;
+import com.taibai.common.log.annotation.SysLog;
+import com.taibai.common.security.service.FitmgrUser;
+import com.taibai.common.security.util.SecurityUtils;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;

@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.config;
+package com.taibai.common.core.config;
 
 import java.time.ZoneId;
 import java.util.Locale;
@@ -12,14 +12,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fitmgr.common.core.jackson.FitmgrJavaTimeModule;
+import com.taibai.common.core.jackson.FitmgrJavaTimeModule;
 
 import cn.hutool.core.date.DatePattern;
 
 /**
  * JacksonConfig
  *
- * @author Fitmgr
+ * @author Taibai
  * @date: 2018/10/22
  */
 @Configuration

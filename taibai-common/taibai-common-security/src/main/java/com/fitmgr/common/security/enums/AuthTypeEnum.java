@@ -1,4 +1,4 @@
-package com.fitmgr.common.security.enums;
+package com.taibai.common.security.enums;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -6,7 +6,7 @@ import org.apache.commons.lang3.StringUtils;
  * 
  * 登录类型枚举
  *
- * @author Fitmgr
+ * @author Taibai
  * @date: 2021年3月8日 下午5:01:29
  */
 public enum AuthTypeEnum {

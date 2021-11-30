@@ -1,4 +1,4 @@
-package com.fitmgr.common.encrypt.jasypt;
+package com.taibai.common.encrypt.jasypt;
 
 import org.jasypt.encryption.StringEncryptor;
 import org.springframework.context.annotation.Bean;

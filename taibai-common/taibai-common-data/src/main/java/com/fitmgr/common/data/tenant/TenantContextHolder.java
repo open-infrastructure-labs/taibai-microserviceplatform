@@ -1,12 +1,12 @@
 
-package com.fitmgr.common.data.tenant;
+package com.taibai.common.data.tenant;
 
 import com.alibaba.ttl.TransmittableThreadLocal;
 
 import lombok.experimental.UtilityClass;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/10/4 租户工具类
  */
 @UtilityClass

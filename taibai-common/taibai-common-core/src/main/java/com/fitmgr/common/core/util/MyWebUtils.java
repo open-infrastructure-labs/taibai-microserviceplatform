@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.core.util;
+package com.taibai.common.core.util;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,7 +19,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.method.HandlerMethod;
 
-import com.fitmgr.common.core.exception.CheckedException;
+import com.taibai.common.core.exception.CheckedException;
 
 import cn.hutool.core.codec.Base64;
 import cn.hutool.json.JSONUtil;
@@ -30,7 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Miscellaneous utilities for web applications.
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @Slf4j
 @UtilityClass

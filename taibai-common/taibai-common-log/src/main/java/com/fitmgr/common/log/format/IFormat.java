@@ -1,9 +1,9 @@
-package com.fitmgr.common.log.format;
+package com.taibai.common.log.format;
 
 /**
  * 为了资源的传参格式化
  * 
- * @author Fitmgr
+ * @author Taibai
  * @date 2020-05-03
  */
 public interface IFormat {

@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.component;
+package com.taibai.common.security.component;
 
 import java.io.IOException;
 
@@ -13,10 +13,10 @@ import org.springframework.web.client.DefaultResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/11/10
  */
-@ComponentScan("com.fitmgr.common.security")
+@ComponentScan("com.taibai.common.security")
 public class ResourceServerAutoConfiguration {
     @Bean
     @Primary

@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.service;
+package com.taibai.common.security.service;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -15,17 +15,17 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSON;
-import com.fitmgr.admin.api.dto.UserInfo;
-import com.fitmgr.admin.api.entity.User;
-import com.fitmgr.admin.api.feign.RemoteAuthService;
-import com.fitmgr.admin.api.feign.RemoteTenantService;
-import com.fitmgr.admin.api.feign.RemoteUserService;
-import com.fitmgr.admin.api.vo.AuthVO;
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.common.core.constant.SecurityConstants;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.security.exception.InvalidException;
-import com.fitmgr.common.security.util.AuthUtils;
+import com.taibai.admin.api.dto.UserInfo;
+import com.taibai.admin.api.entity.User;
+import com.taibai.admin.api.feign.RemoteAuthService;
+import com.taibai.admin.api.feign.RemoteTenantService;
+import com.taibai.admin.api.feign.RemoteUserService;
+import com.taibai.admin.api.vo.AuthVO;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.common.core.constant.SecurityConstants;
+import com.taibai.common.core.util.R;
+import com.taibai.common.security.exception.InvalidException;
+import com.taibai.common.security.util.AuthUtils;
 
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
@@ -34,7 +34,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 用户详细信息
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @Slf4j
 @Service("fitmgrUserDetailsServiceImpl")

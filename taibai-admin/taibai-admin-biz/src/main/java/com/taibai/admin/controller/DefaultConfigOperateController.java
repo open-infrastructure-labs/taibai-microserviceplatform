@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.fitmgr.admin.api.entity.DefaultConfigOperate;
-import com.fitmgr.admin.mapper.DefaultConfigOperateMapper;
-import com.fitmgr.common.core.util.R;
+import com.taibai.admin.api.entity.DefaultConfigOperate;
+import com.taibai.admin.mapper.DefaultConfigOperateMapper;
+import com.taibai.common.core.util.R;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

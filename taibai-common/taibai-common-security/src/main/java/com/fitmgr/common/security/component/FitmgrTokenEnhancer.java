@@ -15,7 +15,7 @@
  * Author: lengleng (wangiegie@gmail.com)
  */
 
-package com.fitmgr.common.security.component;
+package com.taibai.common.security.component;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,11 +25,11 @@ import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 
-import com.fitmgr.common.core.constant.SecurityConstants;
-import com.fitmgr.common.security.service.FitmgrUser;
+import com.taibai.common.core.constant.SecurityConstants;
+import com.taibai.common.security.service.FitmgrUser;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2019-09-17
  *       <p>
  *       token增强，客户端模式不增强。

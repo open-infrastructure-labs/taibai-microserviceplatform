@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fitmgr.admin.api.vo.TenantTypeVO;
-import com.fitmgr.admin.service.ITenantTypeService;
-import com.fitmgr.common.core.util.R;
+import com.taibai.admin.api.vo.TenantTypeVO;
+import com.taibai.admin.service.ITenantTypeService;
+import com.taibai.common.core.util.R;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -21,7 +21,7 @@ import lombok.AllArgsConstructor;
  * 租户类型表 前端控制器
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-14
  */
 @RestController

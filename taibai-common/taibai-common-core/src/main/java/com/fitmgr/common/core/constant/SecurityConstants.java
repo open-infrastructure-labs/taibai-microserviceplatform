@@ -1,8 +1,8 @@
 
-package com.fitmgr.common.core.constant;
+package com.taibai.common.core.constant;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2017-12-18
  */
 public interface SecurityConstants {
@@ -25,7 +25,7 @@ public interface SecurityConstants {
     /**
      * 前缀
      */
-    String FITMGR_PREFIX = "fitmgr_";
+    String FITMGR_PREFIX = "taibai_";
 
     /**
      * oauth 相关前缀
@@ -34,7 +34,7 @@ public interface SecurityConstants {
     /**
      * 项目的license
      */
-    String FITMGR_LICENSE = "made by fitmgr";
+    String FITMGR_LICENSE = "made by taibai";
 
     /**
      * 内部
@@ -46,7 +46,7 @@ public interface SecurityConstants {
      */
     String FROM = "from";
 
-    String HEADER_CALL_MODE = "fitmgr-call-mode";
+    String HEADER_CALL_MODE = "taibai-call-mode";
 
     String INNER_CALL = "inner";
 
@@ -69,7 +69,7 @@ public interface SecurityConstants {
      */
     String MOBILE_TOKEN_URL = "/mobile/token/*";
 
-    String FITMGR_OAUTH_PREFIX = "fitmgr_oauth";
+    String FITMGR_OAUTH_PREFIX = "taibai_oauth";
 
     /**
      * oauth 客户端信息

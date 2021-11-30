@@ -1,4 +1,4 @@
-package com.fitmgr.admin.service.impl;
+package com.taibai.admin.service.impl;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -14,19 +14,19 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fitmgr.admin.api.dto.SessionDTO;
-import com.fitmgr.admin.api.entity.AuthCheck;
-import com.fitmgr.admin.api.entity.Session;
-import com.fitmgr.admin.api.feign.RemoteAuthService;
-import com.fitmgr.admin.api.vo.SessionVO;
-import com.fitmgr.admin.exceptions.UserCenterException;
-import com.fitmgr.admin.mapper.SessionMapper;
-import com.fitmgr.admin.service.ISessionService;
-import com.fitmgr.admin.task.CheckSessionTimeoutTask;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.constant.enums.OperatingRangeEnum;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.security.util.SecurityUtils;
+import com.taibai.admin.api.dto.SessionDTO;
+import com.taibai.admin.api.entity.AuthCheck;
+import com.taibai.admin.api.entity.Session;
+import com.taibai.admin.api.feign.RemoteAuthService;
+import com.taibai.admin.api.vo.SessionVO;
+import com.taibai.admin.exceptions.UserCenterException;
+import com.taibai.admin.mapper.SessionMapper;
+import com.taibai.admin.service.ISessionService;
+import com.taibai.admin.task.CheckSessionTimeoutTask;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.constant.enums.OperatingRangeEnum;
+import com.taibai.common.core.util.R;
+import com.taibai.common.security.util.SecurityUtils;
 
 import lombok.AllArgsConstructor;
 

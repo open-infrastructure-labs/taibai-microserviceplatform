@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.data.tenant;
+package com.taibai.common.data.tenant;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -8,7 +8,7 @@ import net.sf.jsqlparser.expression.Expression;
 import net.sf.jsqlparser.expression.LongValue;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018-12-26
  *       <p>
  *       租户维护处理器

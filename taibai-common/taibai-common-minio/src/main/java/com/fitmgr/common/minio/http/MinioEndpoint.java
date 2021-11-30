@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.minio.http;
+package com.taibai.common.minio.http;
 
 import java.util.HashMap;
 import java.util.List;
@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.fitmgr.common.minio.service.MinioTemplate;
-import com.fitmgr.common.minio.vo.MinioItem;
-import com.fitmgr.common.minio.vo.MinioObject;
+import com.taibai.common.minio.service.MinioTemplate;
+import com.taibai.common.minio.vo.MinioItem;
+import com.taibai.common.minio.vo.MinioObject;
 
 import io.minio.messages.Bucket;
 import lombok.AllArgsConstructor;
@@ -28,7 +28,7 @@ import lombok.SneakyThrows;
 /**
  * minio 对外提供服务端点
  *
- * @author Fitmgr
+ * @author Taibai
  *         <p>
  *         minio.endpoint.enable
  */

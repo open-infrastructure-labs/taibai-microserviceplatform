@@ -1,9 +1,9 @@
-package com.fitmgr.admin.service.impl;
+package com.taibai.admin.service.impl;
 
-import com.fitmgr.admin.api.entity.SessionConfig;
-import com.fitmgr.admin.exceptions.UserCenterException;
-import com.fitmgr.admin.mapper.SessionConfigMapper;
-import com.fitmgr.admin.service.ISessionConfigService;
+import com.taibai.admin.api.entity.SessionConfig;
+import com.taibai.admin.exceptions.UserCenterException;
+import com.taibai.admin.mapper.SessionConfigMapper;
+import com.taibai.admin.service.ISessionConfigService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;

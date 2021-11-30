@@ -15,19 +15,19 @@
  * Author: lengleng (wangiegie@gmail.com)
  */
 
-package com.fitmgr.common.gateway.support;
+package com.taibai.common.gateway.support;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fitmgr.common.gateway.vo.RouteDefinitionVo;
+import com.taibai.common.gateway.vo.RouteDefinitionVo;
 
 import cn.hutool.cache.Cache;
 import cn.hutool.cache.CacheUtil;
 import lombok.experimental.UtilityClass;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2019-08-16
  *       <p>
  *       路由缓存工具类

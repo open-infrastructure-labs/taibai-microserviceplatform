@@ -1,4 +1,4 @@
-package com.fitmgr.admin.threadpool;
+package com.taibai.admin.threadpool;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

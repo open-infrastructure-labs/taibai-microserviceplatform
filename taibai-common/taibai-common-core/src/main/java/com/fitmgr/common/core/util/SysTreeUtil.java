@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.util;
+package com.taibai.common.core.util;
 
 import lombok.experimental.UtilityClass;
 import org.apache.commons.lang3.StringUtils;

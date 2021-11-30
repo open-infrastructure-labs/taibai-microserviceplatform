@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.annotation;
+package com.taibai.common.security.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -12,11 +12,11 @@ import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
-import com.fitmgr.common.security.component.ResourceServerAutoConfiguration;
-import com.fitmgr.common.security.component.SecurityBeanDefinitionRegistrar;
+import com.taibai.common.security.component.ResourceServerAutoConfiguration;
+import com.taibai.common.security.component.SecurityBeanDefinitionRegistrar;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/11/10
  *       <p>
  *       资源服务注解

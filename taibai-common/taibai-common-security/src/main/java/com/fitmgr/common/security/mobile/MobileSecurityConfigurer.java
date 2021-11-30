@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.mobile;
+package com.taibai.common.security.mobile;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationEventPublisher;
@@ -12,14 +12,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fitmgr.common.security.component.ResourceAuthExceptionEntryPoint;
-import com.fitmgr.common.security.service.FitmgrUserDetailsService;
+import com.taibai.common.security.component.ResourceAuthExceptionEntryPoint;
+import com.taibai.common.security.service.FitmgrUserDetailsService;
 
 import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/8/5 手机号登录配置入口
  */
 @Getter

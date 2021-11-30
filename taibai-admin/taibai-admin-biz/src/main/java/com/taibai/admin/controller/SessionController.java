@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fitmgr.admin.api.dto.SessionDTO;
-import com.fitmgr.admin.api.entity.Session;
-import com.fitmgr.admin.api.entity.SessionConfig;
-import com.fitmgr.admin.api.vo.SessionVO;
-import com.fitmgr.admin.service.ISessionConfigService;
-import com.fitmgr.admin.service.ISessionService;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.util.R;
+import com.taibai.admin.api.dto.SessionDTO;
+import com.taibai.admin.api.entity.Session;
+import com.taibai.admin.api.entity.SessionConfig;
+import com.taibai.admin.api.vo.SessionVO;
+import com.taibai.admin.service.ISessionConfigService;
+import com.taibai.admin.service.ISessionService;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.util.R;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;

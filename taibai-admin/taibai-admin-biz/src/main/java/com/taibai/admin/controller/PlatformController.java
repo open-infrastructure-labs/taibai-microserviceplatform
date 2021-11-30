@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fitmgr.admin.api.entity.Platform;
-import com.fitmgr.admin.service.IPlatformService;
-import com.fitmgr.common.core.util.R;
+import com.taibai.admin.api.entity.Platform;
+import com.taibai.admin.service.IPlatformService;
+import com.taibai.common.core.util.R;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;

@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.util;
+package com.taibai.common.core.util;
 
 import java.io.OutputStream;
 import java.net.URLEncoder;
@@ -26,7 +26,7 @@ import lombok.experimental.UtilityClass;
 /**
  * Excel导出工具
  * 
- * @author Fitmgr
+ * @author Taibai
  * @date 2019-11-28
  */
 @UtilityClass

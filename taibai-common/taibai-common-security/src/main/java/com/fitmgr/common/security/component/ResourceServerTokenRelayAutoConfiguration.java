@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.component;
+package com.taibai.common.security.component;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -22,7 +22,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.O
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/9/5 注入AccessTokenContextRelay 解决feign 传递token 为空问题
  */
 @Configuration

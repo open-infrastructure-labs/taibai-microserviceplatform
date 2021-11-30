@@ -1,17 +1,17 @@
 
-package com.fitmgr.common.security.component;
+package com.taibai.common.security.component;
 
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.type.AnnotationMetadata;
 
-import com.fitmgr.common.core.constant.SecurityConstants;
+import com.taibai.common.core.constant.SecurityConstants;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018-11-24
  */
 @Slf4j

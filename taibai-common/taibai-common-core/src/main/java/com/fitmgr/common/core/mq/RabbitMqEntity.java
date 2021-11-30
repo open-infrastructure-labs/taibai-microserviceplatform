@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.mq;
+package com.taibai.common.core.mq;
 
 import lombok.Data;
 

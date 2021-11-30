@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.data.datascope;
+package com.taibai.common.data.datascope;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/8/30 数据权限查询参数
  */
 @Data

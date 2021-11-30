@@ -1,4 +1,4 @@
-package com.fitmgr.common.security.feign;
+package com.taibai.common.security.feign;
 
 import feign.Response;
 import feign.codec.ErrorDecoder;

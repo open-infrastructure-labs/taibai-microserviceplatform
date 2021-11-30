@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -26,12 +26,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fitmgr.admin.api.entity.LdapConfig;
-import com.fitmgr.admin.api.entity.LdapUser;
-import com.fitmgr.admin.service.ILdapService;
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.encrypt.util.AesUtil;
+import com.taibai.admin.api.entity.LdapConfig;
+import com.taibai.admin.api.entity.LdapUser;
+import com.taibai.admin.service.ILdapService;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.common.core.util.R;
+import com.taibai.common.encrypt.util.AesUtil;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;

@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -21,14 +21,14 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fitmgr.admin.api.dto.FunctionDTO;
-import com.fitmgr.admin.api.entity.Auth;
-import com.fitmgr.admin.api.entity.Function;
-import com.fitmgr.admin.service.IAuthService;
-import com.fitmgr.admin.service.IFunctionService;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.log.annotation.SysLog;
+import com.taibai.admin.api.dto.FunctionDTO;
+import com.taibai.admin.api.entity.Auth;
+import com.taibai.admin.api.entity.Function;
+import com.taibai.admin.service.IAuthService;
+import com.taibai.admin.service.IFunctionService;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.util.R;
+import com.taibai.common.log.annotation.SysLog;
 
 import cn.hutool.core.bean.BeanUtil;
 import io.swagger.annotations.Api;
@@ -43,7 +43,7 @@ import lombok.extern.slf4j.Slf4j;
  * 功能表 前端控制器
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-16
  */
 @RestController

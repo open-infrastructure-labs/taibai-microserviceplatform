@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.annotation;
+package com.taibai.common.security.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/11/26
  *       <p>
  *       服务调用不鉴权注解

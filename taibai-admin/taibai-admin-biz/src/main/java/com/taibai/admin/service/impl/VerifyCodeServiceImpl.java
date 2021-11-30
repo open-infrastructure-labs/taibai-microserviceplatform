@@ -1,4 +1,4 @@
-package com.fitmgr.admin.service.impl;
+package com.taibai.admin.service.impl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,15 +11,15 @@ import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.fitmgr.admin.api.constants.VerifyTypeEnum;
-import com.fitmgr.admin.api.dto.VerifyCodeDTO;
-import com.fitmgr.admin.api.entity.LoginVerifyConfig;
-import com.fitmgr.admin.api.entity.User;
-import com.fitmgr.admin.mapper.LoginVerifyConfigMapper;
-import com.fitmgr.admin.mapper.UserMapper;
-import com.fitmgr.admin.service.VerifyCodeService;
-import com.fitmgr.admin.utils.AdminUtils;
-import com.fitmgr.common.core.util.R;
+import com.taibai.admin.api.constants.VerifyTypeEnum;
+import com.taibai.admin.api.dto.VerifyCodeDTO;
+import com.taibai.admin.api.entity.LoginVerifyConfig;
+import com.taibai.admin.api.entity.User;
+import com.taibai.admin.mapper.LoginVerifyConfigMapper;
+import com.taibai.admin.mapper.UserMapper;
+import com.taibai.admin.service.VerifyCodeService;
+import com.taibai.admin.utils.AdminUtils;
+import com.taibai.common.core.util.R;
 import com.google.common.collect.Lists;
 
 import lombok.AllArgsConstructor;

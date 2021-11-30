@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.data.mybatis;
+package com.taibai.common.data.mybatis;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,16 +16,16 @@ import com.baomidou.mybatisplus.core.injector.ISqlInjector;
 import com.baomidou.mybatisplus.core.parser.ISqlParser;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.tenant.TenantSqlParser;
-import com.fitmgr.common.data.datascope.DataScopeInterceptor;
-import com.fitmgr.common.data.tenant.MyTenantHandler;
+import com.taibai.common.data.datascope.DataScopeInterceptor;
+import com.taibai.common.data.tenant.MyTenantHandler;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2017/10/29
  */
 @Configuration
 @ConditionalOnBean(DataSource.class)
-@MapperScan("com.fitmgr.**.mapper")
+@MapperScan("com.taibai.**.mapper")
 public class MybatisPlusConfig {
 
     /**

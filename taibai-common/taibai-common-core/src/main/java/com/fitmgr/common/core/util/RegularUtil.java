@@ -1,10 +1,10 @@
-package com.fitmgr.common.core.util;
+package com.taibai.common.core.util;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2020/5/2 17:23
  * @Description 正则验证工具类
  */

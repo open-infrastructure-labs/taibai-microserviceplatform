@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.fitmgr.admin.mapper.UserMapper">
+<mapper namespace="com.taibai.admin.mapper.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.fitmgr.admin.api.entity.User">
+    <resultMap id="BaseResultMap" type="com.taibai.admin.api.entity.User">
         <result column="id" property="id"/>
         <result column="affiliation_type" property="affiliationType"/>
         <result column="default_tenant_id" property="defaultTenantId"/>
@@ -26,7 +26,7 @@
     </resultMap>
 
     <!-- UserVO查询映射结果 -->
-    <resultMap id="userVOResultMap" type="com.fitmgr.admin.api.vo.UserVO">
+    <resultMap id="userVOResultMap" type="com.taibai.admin.api.vo.UserVO">
         <result column="id" property="id"/>
         <result column="affiliation_type" property="affiliationType"/>
         <result column="default_tenant_id" property="defaultTenantId"/>
@@ -47,7 +47,7 @@
         <result column="del_flag" property="delFlag"/>
         <result column="new_import" property="newImport"/>
         <result column="lock_state" property="lockState"/>
-        <collection property="roleList" ofType="com.fitmgr.admin.api.entity.Role">
+        <collection property="roleList" ofType="com.taibai.admin.api.entity.Role">
             <id column="id" property="id"/>
             <result column="role_name" property="roleName"/>
             <result column="role_code" property="roleCode"/>
@@ -55,7 +55,7 @@
             <result column="update_time" property="updateTime"/>
             <result column="del_flag" property="delFlag"/>
         </collection>
-        <collection property="projectList" ofType="com.fitmgr.admin.api.entity.Project">
+        <collection property="projectList" ofType="com.taibai.admin.api.entity.Project">
             <id column="id" property="id"/>
             <result column="name" property="name"/>
             <result column="description" property="description"/>
@@ -65,7 +65,7 @@
             <result column="update_time" property="updateTime"/>
             <result column="del_flag" property="delFlag"/>
         </collection>
-        <collection property="sysRoleList" ofType="com.fitmgr.admin.api.entity.Role">
+        <collection property="sysRoleList" ofType="com.taibai.admin.api.entity.Role">
             <id column="id" property="id"/>
             <result column="role_name" property="roleName"/>
             <result column="role_code" property="roleCode"/>
@@ -74,7 +74,7 @@
             <result column="del_flag" property="delFlag"/>
         </collection>
 
-        <collection property="tenantList" ofType="com.fitmgr.admin.api.entity.Tenant">
+        <collection property="tenantList" ofType="com.taibai.admin.api.entity.Tenant">
             <id column="id" property="id"/>
             <result column="name" property="name"/>
             <result column="english_name" property="englishName"/>
@@ -91,7 +91,7 @@
     </resultMap>
 
     <!-- UserVO查询映射结果 -->
-    <resultMap id="userVOResultMapResult" type="com.fitmgr.admin.api.vo.UserVO">
+    <resultMap id="userVOResultMapResult" type="com.taibai.admin.api.vo.UserVO">
         <result column="id" property="id"/>
         <result column="affiliation_type" property="affiliationType"/>
         <result column="username" property="username"/>
@@ -110,7 +110,7 @@
         <result column="update_time" property="updateTime"/>
         <result column="del_flag" property="delFlag"/>
         <result column="new_import" property="newImport"/>
-        <collection property="roleList" ofType="com.fitmgr.admin.api.entity.Role">
+        <collection property="roleList" ofType="com.taibai.admin.api.entity.Role">
             <id column="rol_id" property="id"/>
             <result column="role_name" property="roleName"/>
             <result column="role_code" property="roleCode"/>
@@ -121,7 +121,7 @@
     </resultMap>
 
     <!-- UserVO 分页查询映射结果 -->
-    <resultMap id="userVOListResultMap" type="com.fitmgr.admin.api.vo.UserVO">
+    <resultMap id="userVOListResultMap" type="com.taibai.admin.api.vo.UserVO">
         <result column="id" property="id"/>
         <result column="affiliation_type" property="affiliationType"/>
         <result column="default_tenant_id" property="defaultTenantId"/>
@@ -144,7 +144,7 @@
         <result column="lock_state" property="lockState"/>
     </resultMap>
 
-    <resultMap id="roleResultMap" type="com.fitmgr.admin.api.entity.Role">
+    <resultMap id="roleResultMap" type="com.taibai.admin.api.entity.Role">
         <id column="id" property="id"/>
         <result column="role_name" property="roleName"/>
         <result column="role_code" property="roleCode"/>
@@ -161,7 +161,7 @@
         <result column="project_default_role" property="projectDefaultRole"/>
     </resultMap>
 
-    <resultMap id="projectResultMap" type="com.fitmgr.admin.api.entity.Project">
+    <resultMap id="projectResultMap" type="com.taibai.admin.api.entity.Project">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="description" property="description" />
@@ -176,7 +176,7 @@
         <result column="coss_id" property="cossId" />
     </resultMap>
 
-    <resultMap id="tenantResultMap" type="com.fitmgr.admin.api.entity.Tenant">
+    <resultMap id="tenantResultMap" type="com.taibai.admin.api.entity.Tenant">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="english_name" property="englishName"/>
@@ -191,7 +191,7 @@
         <result column="level" property="level"/>
     </resultMap>
 
-    <resultMap id="tenantRoleResultMap" type="com.fitmgr.admin.api.entity.TenantRole">
+    <resultMap id="tenantRoleResultMap" type="com.taibai.admin.api.entity.TenantRole">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="english_name" property="englishName"/>
@@ -208,7 +208,7 @@
         <result column="role_name" property="roleName"/>
     </resultMap>
 
-    <resultMap id="projectRoleResultMap" type="com.fitmgr.admin.api.entity.ProjectRole">
+    <resultMap id="projectRoleResultMap" type="com.taibai.admin.api.entity.ProjectRole">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="description" property="description" />
@@ -225,7 +225,7 @@
         <result column="role_name" property="roleName"/>
     </resultMap>
 
-    <resultMap id="userCountMap" type="com.fitmgr.admin.api.entity.UserCount">
+    <resultMap id="userCountMap" type="com.taibai.admin.api.entity.UserCount">
         <result column="tenant_id" property="tenantId" />
         <result column="project_id" property="projectId" />
         <result column="count" property="count" />
@@ -273,7 +273,7 @@
     </select>
 
     <!-- 查询非普通用户的所有角色信息 -->
-    <select id="selectRoleByTenantIdAndRoleCode" resultType="com.fitmgr.admin.api.entity.Role">
+    <select id="selectRoleByTenantIdAndRoleCode" resultType="com.taibai.admin.api.entity.Role">
         SELECT DISTINCT r.id,r.role_name,r.role_code,r.inherit_id
         FROM user u
         LEFT JOIN user_role_project urp ON u.id = urp.user_id
@@ -302,7 +302,7 @@
         inner join role r on urp.role_id=r.id and r.del_flag=0
     </select>
 
-    <select id="queryTenantRoleByUserId" resultType="com.fitmgr.admin.api.entity.TenantRole">
+    <select id="queryTenantRoleByUserId" resultType="com.taibai.admin.api.entity.TenantRole">
         SELECT DISTINCT t.id,t.name,t.english_name,t.type_id,t.description,t.status,t.parent_id,t.create_time, t.update_time, t.create_project, t.del_flag, t.level, r.id as role_id, r.role_name
         FROM tenant t
         inner JOIN user_role_project urp ON urp.user_id=#{userId} and t.id = urp.tenant_id and urp.project_id = -1 and t.del_flag = 0
@@ -552,7 +552,7 @@
     </select>
 
     <!-- 通过userId查询project信息 -->
-    <select id="queryAffiliationType" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryAffiliationType" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT id,affiliation_type,tenant_id,default_project
         FROM user
         WHERE id=#{userId} and del_flag = 0;
@@ -560,12 +560,12 @@
 
 
     <!-- 用户中心信息预览,tenantNumber -->
-    <select id="queryTenantNumber" resultType="com.fitmgr.admin.api.vo.TenantVO">
+    <select id="queryTenantNumber" resultType="com.taibai.admin.api.vo.TenantVO">
         SELECT COUNT(id) AS tenantNumber FROM tenant WHERE del_flag = 0
     </select>
 
     <!-- 用户中心信息预览,projectNumber -->
-    <select id="queryProjectNumber" resultType="com.fitmgr.admin.api.vo.ProjectVO">
+    <select id="queryProjectNumber" resultType="com.taibai.admin.api.vo.ProjectVO">
         SELECT COUNT(id) AS projectNumber FROM project
         <where>
             del_flag = 0
@@ -576,12 +576,12 @@
     </select>
 
     <!-- 用户中心信息预览,roleNumber -->
-    <select id="queryAllRoleNumber" resultType="com.fitmgr.admin.api.vo.RoleVO">
+    <select id="queryAllRoleNumber" resultType="com.taibai.admin.api.vo.RoleVO">
         SELECT COUNT(DISTINCT role_name) AS roleNumber FROM role where del_flag=0
     </select>
 
     <!-- 用户中心信息预览,roleNumber -->
-    <select id="queryRoleNumber" resultType="com.fitmgr.admin.api.vo.RoleVO">
+    <select id="queryRoleNumber" resultType="com.taibai.admin.api.vo.RoleVO">
         SELECT COUNT(DISTINCT urp.role_id) AS roleNumber
         FROM user_role_project urp
         <where>
@@ -595,7 +595,7 @@
     </select>
 
     <!-- 用户中心信息预览,userNumber -->
-    <select id="queryUserNumber" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryUserNumber" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT COUNT(distinct u.username) as userNumber
         FROM user u
         LEFT JOIN user_role_project urp
@@ -610,7 +610,7 @@
             </if>
         </where>
     </select>
-    <select id="queryUserRecentlyNumber" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryUserRecentlyNumber" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT distinct user.username,user.last_login_time
         FROM user
         LEFT JOIN user_role_project urp ON user.id = urp.user_id
@@ -622,7 +622,7 @@
         </where>
     </select>
 
-    <select id="queryProjectUserRecentlyNumber" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryProjectUserRecentlyNumber" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT distinct u.username,u.last_login_time
         FROM user u
         LEFT JOIN user_role_project urp
@@ -635,7 +635,7 @@
         </where>
     </select>
     <!-- 用户中心信息预览,userNumber -->
-    <select id="queryUserInfoByRoleCode" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryUserInfoByRoleCode" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT u.id,u.affiliation_type,u.username,u.name,u.phone,u.email,u.default_role,u.default_tenant_id,u.status,u.last_login_time
         FROM user u
         inner JOIN user_role_project urp ON u.id = urp.user_id and u.del_flag = 0
@@ -646,7 +646,7 @@
     </select>
 
     <!-- 通过roleCode和tenantId查询某个租户下拥有某种角色的所有用户 -->
-    <select id="queryUserInfoByRoleCodeAndTenantId" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryUserInfoByRoleCodeAndTenantId" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT
           u.id,
           u.affiliation_type,
@@ -675,7 +675,7 @@
         ORDER BY u.create_time DESC
     </select>
     
-    <select id="queryUserInfoByRoleCodesAndTenantId" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryUserInfoByRoleCodesAndTenantId" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT distinct
           u.id,
           u.affiliation_type,
@@ -734,7 +734,7 @@
     </select>
 
     <!-- 通过roleCode和projectId查询某个project下拥有某种角色的所有用户 -->
-    <select id="queryUserInfoByProjectIdAndRoleCode" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryUserInfoByProjectIdAndRoleCode" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT
           u.id,
           u.affiliation_type,
@@ -762,7 +762,7 @@
     </select>
 
     <!-- 通过租户id和name分页查询用户信息，过滤单个普通用户 -->
-    <select id="queryUserInfoByName" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryUserInfoByName" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT
             u.id,
             u.affiliation_type,
@@ -856,7 +856,7 @@
     </select>
 
     <!-- 根据roleCode分页查询user信息 -->
-    <select id="queryUserInfoByRoleIdAndTenantId" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryUserInfoByRoleIdAndTenantId" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT u.id,u.affiliation_type,u.username,u.name,u.phone,u.email,u.default_role,u.default_tenant_id,u.status,u.last_login_time
         FROM user u
         inner JOIN user_role_project urp ON urp.tenant_id = #{tenantId} and u.id = urp.user_id and u.del_flag=0
@@ -864,7 +864,7 @@
         ORDER BY u.create_time DESC ;
     </select>
 
-    <select id="queryUserMsg" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryUserMsg" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT
         u.id id,
         u.NAME,
@@ -881,7 +881,7 @@
     </select>
 
     <!-- 通过用户usernames集合查询用户信息 -->
-    <select id="queryUserByUsernames" resultType="com.fitmgr.admin.api.vo.UserVO">
+    <select id="queryUserByUsernames" resultType="com.taibai.admin.api.vo.UserVO">
         SELECT
         u.id id,
         u.NAME,
@@ -897,7 +897,7 @@
         </if>
     </select>
 
-    <select id="getUserByTenant" resultType="com.fitmgr.admin.api.entity.User">
+    <select id="getUserByTenant" resultType="com.taibai.admin.api.entity.User">
         SELECT distinct
         u.id,
         u.NAME,
@@ -915,7 +915,7 @@
         AND u.`status` = '0'
         and u.user_type != 'SYSTEM_INTERNAL'
     </select>
-    <select id="getUserByProject" resultType="com.fitmgr.admin.api.entity.User">
+    <select id="getUserByProject" resultType="com.taibai.admin.api.entity.User">
         SELECT distinct
         u.id,
         u.NAME,

@@ -1,4 +1,4 @@
-package com.fitmgr.admin.threadpool;
+package com.taibai.admin.threadpool;
 
 import java.util.Map;
 import java.util.function.Function;

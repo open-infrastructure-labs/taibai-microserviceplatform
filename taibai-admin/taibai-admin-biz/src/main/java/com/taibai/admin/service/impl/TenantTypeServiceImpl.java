@@ -1,4 +1,4 @@
-package com.fitmgr.admin.service.impl;
+package com.taibai.admin.service.impl;
 
 import java.time.LocalDateTime;
 
@@ -10,15 +10,15 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.fitmgr.admin.api.dto.TenantTypeDTO;
-import com.fitmgr.admin.api.entity.Tenant;
-import com.fitmgr.admin.api.entity.TenantType;
-import com.fitmgr.admin.api.vo.TenantTypeVO;
-import com.fitmgr.admin.exceptions.UserCenterException;
-import com.fitmgr.admin.mapper.TenantMapper;
-import com.fitmgr.admin.mapper.TenantTypeMapper;
-import com.fitmgr.admin.service.ITenantTypeService;
-import com.fitmgr.common.core.constant.CommonConstants;
+import com.taibai.admin.api.dto.TenantTypeDTO;
+import com.taibai.admin.api.entity.Tenant;
+import com.taibai.admin.api.entity.TenantType;
+import com.taibai.admin.api.vo.TenantTypeVO;
+import com.taibai.admin.exceptions.UserCenterException;
+import com.taibai.admin.mapper.TenantMapper;
+import com.taibai.admin.mapper.TenantTypeMapper;
+import com.taibai.admin.service.ITenantTypeService;
+import com.taibai.common.core.constant.CommonConstants;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

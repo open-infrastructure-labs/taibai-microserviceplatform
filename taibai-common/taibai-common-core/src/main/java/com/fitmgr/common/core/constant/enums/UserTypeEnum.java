@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.constant.enums;
+package com.taibai.common.core.constant.enums;
 
 public enum UserTypeEnum {
     /**

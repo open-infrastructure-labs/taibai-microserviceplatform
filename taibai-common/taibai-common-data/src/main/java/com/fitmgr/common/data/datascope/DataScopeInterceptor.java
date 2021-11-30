@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.data.datascope;
+package com.taibai.common.data.datascope;
 
 import java.sql.Connection;
 import java.util.Arrays;
@@ -26,11 +26,11 @@ import org.springframework.security.core.GrantedAuthority;
 
 import com.baomidou.mybatisplus.core.toolkit.PluginUtils;
 import com.baomidou.mybatisplus.extension.handlers.AbstractSqlParserHandler;
-import com.fitmgr.common.core.constant.SecurityConstants;
-import com.fitmgr.common.core.exception.CheckedException;
-import com.fitmgr.common.data.enums.DataScopeTypeEnum;
-import com.fitmgr.common.security.service.FitmgrUser;
-import com.fitmgr.common.security.util.SecurityUtils;
+import com.taibai.common.core.constant.SecurityConstants;
+import com.taibai.common.core.exception.CheckedException;
+import com.taibai.common.data.enums.DataScopeTypeEnum;
+import com.taibai.common.security.service.FitmgrUser;
+import com.taibai.common.security.util.SecurityUtils;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.collection.CollectionUtil;
@@ -41,7 +41,7 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/12/26
  *       <p>
  *       mybatis 数据权限拦截器

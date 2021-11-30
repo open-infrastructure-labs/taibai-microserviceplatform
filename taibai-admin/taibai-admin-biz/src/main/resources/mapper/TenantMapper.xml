@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.fitmgr.admin.mapper.TenantMapper">
+<mapper namespace="com.taibai.admin.mapper.TenantMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.fitmgr.admin.api.entity.Tenant">
+    <resultMap id="BaseResultMap" type="com.taibai.admin.api.entity.Tenant">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="english_name" property="englishName"/>
@@ -19,7 +19,7 @@
     </resultMap>
 
     <!-- tenantVo查询映射结果 -->
-    <resultMap id="tenantVoResultMap" type="com.fitmgr.admin.api.vo.TenantVO">
+    <resultMap id="tenantVoResultMap" type="com.taibai.admin.api.vo.TenantVO">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="english_name" property="englishName"/>
@@ -37,13 +37,13 @@
     </resultMap>
 
     <!-- tenantResource查询映射结果 -->
-    <resultMap id="tenantResourceResultMap" type="com.fitmgr.admin.api.vo.TenantResourcePoolVO">
+    <resultMap id="tenantResourceResultMap" type="com.taibai.admin.api.vo.TenantResourcePoolVO">
         <result column="tenant_id" property="tenantId"/>
         <result column="resource_pool_code" property="resourcePoolCode"/>
         <result column="resource_pool_id" property="resourcePoolId"/>
     </resultMap>
 
-    <resultMap id="TenantProjectUserResultMap" type="com.fitmgr.admin.api.vo.TenantProjectUserVO">
+    <resultMap id="TenantProjectUserResultMap" type="com.taibai.admin.api.vo.TenantProjectUserVO">
         <id column="tenant_id" property="tenantId"/>
         <result column="tenant_name" property="tenantName"/>
         <result column="project_id" property="projectId"/>
@@ -52,7 +52,7 @@
         <result column="user_name" property="userName"/>
     </resultMap>
 
-    <resultMap id="TenantMemberResultMap" type="com.fitmgr.admin.api.vo.Member">
+    <resultMap id="TenantMemberResultMap" type="com.taibai.admin.api.vo.Member">
         <result column="user_id" property="userId"/>
         <result column="name" property="name" />
         <result column="phone" property="phone" />
@@ -194,7 +194,7 @@
         from tenant_resource_pool
         where tenant_id = #{tenantId} and resource_pool_code = #{resourcePoolCode}
     </select>
-    <select id="translationNoProject" resultType="com.fitmgr.admin.api.vo.TenantProjectUserVO">
+    <select id="translationNoProject" resultType="com.taibai.admin.api.vo.TenantProjectUserVO">
          SELECT
 	        distinct t.id tenant_id,
 	        t.`name` tenant_name,
@@ -214,12 +214,12 @@
     <!--            (#{item.tenantId},#{item.resourcePoolId},#{item.resourcePoolCode})-->
     <!--        </foreach>-->
     <!--    </insert>-->
-    <insert id="bind" parameterType="com.fitmgr.admin.api.entity.TenantResourcePool">
+    <insert id="bind" parameterType="com.taibai.admin.api.entity.TenantResourcePool">
         insert into tenant_resource_pool (tenant_id,resource_pool_id,resource_pool_code) values (#{tenantId},#{resourcePoolId},#{resourcePoolCode})
 
     </insert>
 
-    <delete id="quitBind" parameterType="com.fitmgr.admin.api.entity.TenantResourcePool">
+    <delete id="quitBind" parameterType="com.taibai.admin.api.entity.TenantResourcePool">
         delete from tenant_resource_pool where tenant_id = #{tenantId} and resource_pool_id = #{resourcePoolId} and resource_pool_code = #{resourcePoolCode}
     </delete>
 
@@ -241,7 +241,7 @@
         </foreach>
     </insert>
 
-    <delete id="removeMember" parameterType="com.fitmgr.admin.api.entity.UserRoleProject">
+    <delete id="removeMember" parameterType="com.taibai.admin.api.entity.UserRoleProject">
         delete from user_role_project where user_id = #{userRoleProject.userId} and tenant_id = #{userRoleProject.tenantId}
     </delete>
 

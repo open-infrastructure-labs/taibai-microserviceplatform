@@ -16,17 +16,17 @@ import org.springframework.security.oauth2.provider.error.WebResponseExceptionTr
 import org.springframework.security.web.util.ThrowableAnalyzer;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 
-import com.fitmgr.common.security.exception.Auth2Exception;
-import com.fitmgr.common.security.exception.ForbiddenException;
-import com.fitmgr.common.security.exception.InvalidException;
-import com.fitmgr.common.security.exception.MethodNotAllowedException;
-import com.fitmgr.common.security.exception.ServerErrorException;
-import com.fitmgr.common.security.exception.UnauthorizedException;
+import com.taibai.common.security.exception.Auth2Exception;
+import com.taibai.common.security.exception.ForbiddenException;
+import com.taibai.common.security.exception.InvalidException;
+import com.taibai.common.security.exception.MethodNotAllowedException;
+import com.taibai.common.security.exception.ServerErrorException;
+import com.taibai.common.security.exception.UnauthorizedException;
 
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/7/8 异常处理,重写oauth 默认实现
  */
 @Slf4j

@@ -1,15 +1,15 @@
 
-package com.fitmgr.common.security.service;
+package com.taibai.common.security.service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.fitmgr.admin.api.vo.AuthVO;
-import com.fitmgr.common.security.exception.InvalidException;
+import com.taibai.admin.api.vo.AuthVO;
+import com.taibai.common.security.exception.InvalidException;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/8/15
  */
 public interface FitmgrUserDetailsService extends UserDetailsService {

@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.util;
+package com.taibai.common.core.util;
 
 import java.security.SecureRandom;
 import java.util.UUID;
@@ -6,7 +6,7 @@ import java.util.UUID;
 /**
  * 封装各种生成唯一性ID算法的工具类.
  *
- * @author Fitmgr
+ * @author Taibai
  * @date 2018年5月21日 上午9:40:53
  */
 public class IdGen {

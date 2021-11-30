@@ -1,4 +1,4 @@
-package com.fitmgr.common.encrypt.go;
+package com.taibai.common.encrypt.go;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,10 +12,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 
-import com.fitmgr.common.encrypt.config.KeyYmlModel;
-import com.fitmgr.common.encrypt.enums.SecretKeyType;
-import com.fitmgr.common.encrypt.model.KeyVersion;
-import com.fitmgr.common.encrypt.util.AesUtil;
+import com.taibai.common.encrypt.config.KeyYmlModel;
+import com.taibai.common.encrypt.enums.SecretKeyType;
+import com.taibai.common.encrypt.model.KeyVersion;
+import com.taibai.common.encrypt.util.AesUtil;
 
 /**
  * 根据秘钥版本信息 解密数据密文

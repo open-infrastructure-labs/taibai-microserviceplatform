@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.job.annotation;
+package com.taibai.common.job.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -10,10 +10,10 @@ import java.lang.annotation.Target;
 
 import org.springframework.context.annotation.Import;
 
-import com.fitmgr.common.job.ElasticJobAutoConfiguration;
+import com.taibai.common.job.ElasticJobAutoConfiguration;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/7/24 开启Link job
  */
 @Target({ ElementType.TYPE })

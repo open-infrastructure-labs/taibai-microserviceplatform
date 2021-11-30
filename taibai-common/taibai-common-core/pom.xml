@@ -2,16 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>fitmgr-common</artifactId>
-        <groupId>com.fitmgr</groupId>
-        <version>V3R3B010</version>
+        <artifactId>taibai-common</artifactId>
+        <groupId>com.taibai</groupId>
+        <version>V1R1B010</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fitmgr-common-core</artifactId>
+    <artifactId>taibai-common-core</artifactId>
     <packaging>jar</packaging>
 
-    <description>fitmgr 公共工具类核心包</description>
+    <description>taibai 公共工具类核心包</description>
 
     <dependencies>
         <!--hutool-->
@@ -134,12 +134,12 @@
         <repository>
             <id>nexus</id>
             <name>Releases</name>
-            <url>http://10.127.9.32:8081/repository/maven-fitmgr-releases</url>
+            <url>http://10.127.9.32:8081/repository/maven-taibai-releases</url>
         </repository>
         <snapshotRepository>
             <id>nexus</id>
             <name>Snapshot</name>
-            <url>http://10.127.9.32:8081/repository/maven-fitmgr-snapshots</url>
+            <url>http://10.127.9.32:8081/repository/maven-taibai-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 </project>

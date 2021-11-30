@@ -1,4 +1,4 @@
-package com.fitmgr.common.data.mybatis;
+package com.taibai.common.data.mybatis;
 
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.InvocationTargetException;
@@ -16,7 +16,7 @@ import com.baomidou.mybatisplus.core.conditions.AbstractWrapper;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2021/6/29 11:05
  */
 

@@ -1,4 +1,4 @@
-package com.fitmgr.common.security.model;
+package com.taibai.common.security.model;
 
 import java.io.Serializable;
 import java.util.List;
@@ -10,7 +10,7 @@ import lombok.Data;
  * 
  * 云管鉴权的用户（单点登录专用）
  *
- * @author Fitmgr
+ * @author Taibai
  * @date: 2021年4月9日 下午3:50:16
  */
 @Data

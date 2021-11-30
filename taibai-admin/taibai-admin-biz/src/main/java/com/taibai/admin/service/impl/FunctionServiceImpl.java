@@ -1,4 +1,4 @@
-package com.fitmgr.admin.service.impl;
+package com.taibai.admin.service.impl;
 
 import java.util.List;
 
@@ -8,12 +8,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.codingapi.tx.annotation.TxTransaction;
-import com.fitmgr.admin.api.entity.Auth;
-import com.fitmgr.admin.api.entity.Function;
-import com.fitmgr.admin.mapper.AuthMapper;
-import com.fitmgr.admin.mapper.FunctionMapper;
-import com.fitmgr.admin.service.IFunctionService;
-import com.fitmgr.common.core.util.R;
+import com.taibai.admin.api.entity.Auth;
+import com.taibai.admin.api.entity.Function;
+import com.taibai.admin.mapper.AuthMapper;
+import com.taibai.admin.mapper.FunctionMapper;
+import com.taibai.admin.service.IFunctionService;
+import com.taibai.common.core.util.R;
 
 import lombok.AllArgsConstructor;
 
@@ -22,7 +22,7 @@ import lombok.AllArgsConstructor;
  * 功能表 服务实现类
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-16
  */
 @Service

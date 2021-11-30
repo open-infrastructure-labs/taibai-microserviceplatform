@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.mobile;
+package com.taibai.common.security.mobile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,14 +16,14 @@ import org.springframework.security.web.authentication.AbstractAuthenticationPro
 import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import com.fitmgr.common.core.constant.SecurityConstants;
+import com.taibai.common.core.constant.SecurityConstants;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/1/9 手机号登录验证filter
  */
 public class MobileAuthenticationFilter extends AbstractAuthenticationProcessingFilter {

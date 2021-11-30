@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.swagger.annotation;
+package com.taibai.common.swagger.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -10,10 +10,10 @@ import java.lang.annotation.Target;
 
 import org.springframework.context.annotation.Import;
 
-import com.fitmgr.common.swagger.config.SwaggerAutoConfiguration;
+import com.taibai.common.swagger.config.SwaggerAutoConfiguration;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/7/21 开启Fitmgr swagger
  */
 @Target({ ElementType.TYPE })

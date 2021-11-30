@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.gateway.support;
+package com.taibai.common.gateway.support;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +15,9 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.common.core.util.SpringContextHolder;
-import com.fitmgr.common.gateway.vo.RouteDefinitionVo;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.common.core.util.SpringContextHolder;
+import com.taibai.common.gateway.vo.RouteDefinitionVo;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,7 +25,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/10/31
  *       <p>
  *       redis 保存路由信息，优先级比配置文件高
@@ -71,7 +71,7 @@ public class RedisRouteDefinitionWriter implements RouteDefinitionRepository {
         List<RouteDefinition> definitionList = new ArrayList<>();
         if (CollectionUtils.isEmpty(values)) {
             try {
-                String url = "http://fitmgr-admin-biz/route/reload";
+                String url = "http://taibai-admin-biz/route/reload";
                 RestTemplate restTemplate = SpringContextHolder.getBean("gatewayCommonRestTemplate");
                 Map result = restTemplate.getForObject(url, Map.class);
                 log.info("result={}", result);

@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.util.List;
 
@@ -22,22 +22,22 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fitmgr.activiti.api.feign.RemoteEditorService;
-import com.fitmgr.admin.api.dto.SwitchUserVdcDTO;
-import com.fitmgr.admin.api.entity.Role;
-import com.fitmgr.admin.api.entity.RoleGroupRole;
-import com.fitmgr.admin.api.entity.User;
-import com.fitmgr.admin.api.validation.Save;
-import com.fitmgr.admin.service.IRoleGroupRoleService;
-import com.fitmgr.admin.service.IRoleService;
-import com.fitmgr.common.core.constant.SecurityConstants;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.log.annotation.SysLog;
-import com.fitmgr.common.security.service.FitmgrUser;
-import com.fitmgr.common.security.util.SecurityUtils;
-import com.fitmgr.template.api.feign.RemoteServiceModelService;
-import com.fitmgr.webpush.api.feign.RemoteWebpushService;
+import com.taibai.activiti.api.feign.RemoteEditorService;
+import com.taibai.admin.api.dto.SwitchUserVdcDTO;
+import com.taibai.admin.api.entity.Role;
+import com.taibai.admin.api.entity.RoleGroupRole;
+import com.taibai.admin.api.entity.User;
+import com.taibai.admin.api.validation.Save;
+import com.taibai.admin.service.IRoleGroupRoleService;
+import com.taibai.admin.service.IRoleService;
+import com.taibai.common.core.constant.SecurityConstants;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.util.R;
+import com.taibai.common.log.annotation.SysLog;
+import com.taibai.common.security.service.FitmgrUser;
+import com.taibai.common.security.util.SecurityUtils;
+import com.taibai.template.api.feign.RemoteServiceModelService;
+import com.taibai.webpush.api.feign.RemoteWebpushService;
 
 import cn.hutool.core.util.StrUtil;
 import io.swagger.annotations.Api;
@@ -51,7 +51,7 @@ import lombok.AllArgsConstructor;
  * 角色表 前端控制器
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-16
  */
 @RestController

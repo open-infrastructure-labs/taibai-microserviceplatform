@@ -1,8 +1,8 @@
 
-package com.fitmgr.common.core.exception;
+package com.taibai.common.core.exception;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018年06月22日16:22:15
  */
 public class ValidateCodeException extends Exception {

@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.text;
+package com.taibai.common.core.text;
 
 public class TextController {
 

@@ -1,4 +1,4 @@
-package com.fitmgr.common.encrypt.config;
+package com.taibai.common.encrypt.config;
 
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
@@ -22,7 +22,7 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @since 2020-04-07
  */
 

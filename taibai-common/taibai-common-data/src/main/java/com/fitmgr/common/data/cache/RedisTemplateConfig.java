@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.data.cache;
+package com.taibai.common.data.cache;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.cache.annotation.EnableCaching;
@@ -15,7 +15,7 @@ import lombok.AllArgsConstructor;
 /**
  * RedisTemplate 配置
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @EnableCaching
 @Configuration

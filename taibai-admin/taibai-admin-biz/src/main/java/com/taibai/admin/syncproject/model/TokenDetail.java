@@ -1,4 +1,4 @@
-package com.fitmgr.admin.syncproject.model;
+package com.taibai.admin.syncproject.model;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;

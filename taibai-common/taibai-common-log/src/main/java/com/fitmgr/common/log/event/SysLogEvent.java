@@ -1,6 +1,6 @@
-package com.fitmgr.common.log.event;
+package com.taibai.common.log.event;
 
-import com.fitmgr.log.api.entity.OperateLog;
+import com.taibai.log.api.entity.OperateLog;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,7 +8,7 @@ import lombok.Getter;
 /**
  * 系统日志事件
  * 
- * @author Fitmgr
+ * @author Taibai
  */
 @Getter
 @AllArgsConstructor

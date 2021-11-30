@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.data.cache;
+package com.taibai.common.data.cache;
 
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
@@ -34,7 +34,7 @@ import org.springframework.util.Assert;
  * explicit lock key and checking against presence of this key which leads to
  * additional requests and potential command wait times.
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2.0
  */
 class DefaultRedisCacheWriter implements RedisCacheWriter {

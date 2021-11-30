@@ -1,11 +1,11 @@
-package com.fitmgr.admin.service.impl;
+package com.taibai.admin.service.impl;
 
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.fitmgr.admin.api.entity.RoleGroupRole;
-import com.fitmgr.admin.mapper.RoleGroupRoleMapper;
-import com.fitmgr.admin.service.IRoleGroupRoleService;
+import com.taibai.admin.api.entity.RoleGroupRole;
+import com.taibai.admin.mapper.RoleGroupRoleMapper;
+import com.taibai.admin.service.IRoleGroupRoleService;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
  * 角色表 服务实现类
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-16
  */
 @Slf4j

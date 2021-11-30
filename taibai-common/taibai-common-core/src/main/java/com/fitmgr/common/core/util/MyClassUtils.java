@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.core.util;
+package com.taibai.common.core.util;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
@@ -18,7 +18,7 @@ import lombok.experimental.UtilityClass;
 /**
  * 类工具类
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @UtilityClass
 public class MyClassUtils extends org.springframework.util.ClassUtils {

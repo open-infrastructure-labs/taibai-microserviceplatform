@@ -1,4 +1,4 @@
-package com.fitmgr.common.security.util;
+package com.taibai.common.security.util;
 
 import java.util.regex.Pattern;
 

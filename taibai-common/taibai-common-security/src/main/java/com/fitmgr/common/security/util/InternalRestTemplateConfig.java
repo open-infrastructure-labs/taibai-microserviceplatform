@@ -1,6 +1,6 @@
-package com.fitmgr.common.security.util;
+package com.taibai.common.security.util;
 
-import com.fitmgr.common.core.interceptor.EnvIsoRestTemplateInterceptor;
+import com.taibai.common.core.interceptor.EnvIsoRestTemplateInterceptor;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.conn.socket.ConnectionSocketFactory;

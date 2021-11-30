@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.log.aspect;
+package com.taibai.common.log.aspect;
 
 import java.util.List;
 import java.util.Map;
@@ -20,20 +20,20 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.alibaba.fastjson.JSONObject;
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.common.core.constant.SecurityConstants;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.constant.enums.ResponseCodeEnum;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.log.annotation.SysLog;
-import com.fitmgr.common.log.event.SysLogEvent;
-import com.fitmgr.common.log.format.IFormat;
-import com.fitmgr.common.log.util.SysLogUtils;
-import com.fitmgr.common.security.service.FitmgrUser;
-import com.fitmgr.common.security.util.SecurityUtils;
-import com.fitmgr.log.api.dto.OperateLogDTO;
-import com.fitmgr.log.api.entity.OperateLog;
-import com.fitmgr.resource.api.entity.ServiceOperat;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.common.core.constant.SecurityConstants;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.constant.enums.ResponseCodeEnum;
+import com.taibai.common.core.util.R;
+import com.taibai.common.log.annotation.SysLog;
+import com.taibai.common.log.event.SysLogEvent;
+import com.taibai.common.log.format.IFormat;
+import com.taibai.common.log.util.SysLogUtils;
+import com.taibai.common.security.service.FitmgrUser;
+import com.taibai.common.security.util.SecurityUtils;
+import com.taibai.log.api.dto.OperateLogDTO;
+import com.taibai.log.api.entity.OperateLog;
+import com.taibai.resource.api.entity.ServiceOperat;
 import com.google.common.collect.Lists;
 import com.google.gson.Gson;
 
@@ -43,7 +43,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 操作日志使用spring event异步入库
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @Slf4j
 @Aspect

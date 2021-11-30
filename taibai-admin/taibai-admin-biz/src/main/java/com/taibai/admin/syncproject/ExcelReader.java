@@ -1,4 +1,4 @@
-package com.fitmgr.admin.syncproject;
+package com.taibai.admin.syncproject;
 
 import java.io.File;
 import java.io.FileInputStream;

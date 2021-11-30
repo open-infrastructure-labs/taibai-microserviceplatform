@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.component;
+package com.taibai.common.security.component;
 
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.security.authentication.AccountExpiredException;
@@ -12,7 +12,7 @@ import org.springframework.security.core.userdetails.UserDetailsChecker;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2019-01-02
  */
 @Slf4j
