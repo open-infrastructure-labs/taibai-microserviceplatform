@@ -1,4 +1,4 @@
-package com.fitmgr.admin.threadpool;
+package com.taibai.admin.threadpool;
 
 @FunctionalInterface
 public interface ConsumerInterface {

@@ -1,11 +1,11 @@
 
-package com.fitmgr.common.data.enums;
+package com.taibai.common.data.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/12/26
  *       <p>
  *       数据权限类型

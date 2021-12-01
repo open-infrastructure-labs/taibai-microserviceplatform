@@ -1,4 +1,4 @@
-package com.fitmgr.common.encrypt.util;
+package com.taibai.common.encrypt.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpEntity;

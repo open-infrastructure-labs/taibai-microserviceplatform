@@ -1,4 +1,4 @@
-package com.fitmgr.common.security.vo;
+package com.taibai.common.security.vo;
 
 import lombok.Data;
 

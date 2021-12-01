@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.util.List;
 
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.fitmgr.admin.api.entity.NetworkPool;
-import com.fitmgr.admin.service.INetworkPoolService;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.job.api.entity.Task;
-import com.fitmgr.job.api.sdk.FhJobApiController;
+import com.taibai.admin.api.entity.NetworkPool;
+import com.taibai.admin.service.INetworkPoolService;
+import com.taibai.common.core.util.R;
+import com.taibai.job.api.entity.Task;
+import com.taibai.job.api.sdk.FhJobApiController;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -23,7 +23,7 @@ import lombok.AllArgsConstructor;
  * 全量网络池信息 前端控制器
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-16
  */
 @RestController

@@ -1,4 +1,4 @@
-package com.fitmgr.common.encrypt.enums;
+package com.taibai.common.encrypt.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

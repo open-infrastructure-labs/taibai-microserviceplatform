@@ -1,8 +1,8 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.fitmgr.common.core.config.JacksonConfig,\
-  com.fitmgr.common.core.config.MessageSourceConfig,\
-  com.fitmgr.common.core.config.RestTemplateConfig,\
-  com.fitmgr.common.core.util.SpringContextHolder,\
-  com.fitmgr.common.core.config.EnvIsolationConfig,\
-  com.fitmgr.common.core.interceptor.EnvIsoRestTemplateInterceptor,\
-  com.fitmgr.common.core.config.InternalAdminConfig
+  com.taibai.common.core.config.JacksonConfig,\
+  com.taibai.common.core.config.MessageSourceConfig,\
+  com.taibai.common.core.config.RestTemplateConfig,\
+  com.taibai.common.core.util.SpringContextHolder,\
+  com.taibai.common.core.config.EnvIsolationConfig,\
+  com.taibai.common.core.interceptor.EnvIsoRestTemplateInterceptor,\
+  com.taibai.common.core.config.InternalAdminConfig

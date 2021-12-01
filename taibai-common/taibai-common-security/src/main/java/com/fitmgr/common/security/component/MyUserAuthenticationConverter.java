@@ -15,7 +15,7 @@
  * Author: lengleng (wangiegie@gmail.com)
  */
 
-package com.fitmgr.common.security.component;
+package com.taibai.common.security.component;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -33,16 +33,16 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.common.core.constant.SecurityConstants;
-import com.fitmgr.common.security.exception.Auth2Exception;
-import com.fitmgr.common.security.service.FitmgrUser;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.common.core.constant.SecurityConstants;
+import com.taibai.common.security.exception.Auth2Exception;
+import com.taibai.common.security.service.FitmgrUser;
 
 import cn.hutool.core.util.StrUtil;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2019-03-07
  *       <p>
  *       根据checktoken 的结果转化用户信息

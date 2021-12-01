@@ -1,7 +1,7 @@
 
-package com.fitmgr.common.job.jobinit;
+package com.taibai.common.job.jobinit;
 
-import static com.fitmgr.common.job.ElasticJobAutoConfiguration.DEFAULT_REGISTRY_CENTER_NAME;
+import static com.taibai.common.job.ElasticJobAutoConfiguration.DEFAULT_REGISTRY_CENTER_NAME;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,12 +31,12 @@ import com.dangdang.ddframe.job.lite.api.listener.ElasticJobListener;
 import com.dangdang.ddframe.job.lite.config.LiteJobConfiguration;
 import com.dangdang.ddframe.job.lite.spring.api.SpringJobScheduler;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
-import com.fitmgr.common.job.properties.ElasticJobProperties;
+import com.taibai.common.job.properties.ElasticJobProperties;
 
 import lombok.SneakyThrows;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/7/24 任务初始化基类
  */
 public abstract class AbstractJobInitialization implements ApplicationContextAware {

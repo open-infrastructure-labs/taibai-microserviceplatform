@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.text.SimpleDateFormat;
 import java.time.Instant;
@@ -15,18 +15,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSON;
-import com.fitmgr.admin.api.entity.RestrictLloginTime;
-import com.fitmgr.admin.api.entity.SessionConfig;
-import com.fitmgr.admin.service.IRestrictLoginTimeService;
-import com.fitmgr.admin.service.ISessionConfigService;
-import com.fitmgr.admin.service.ISessionService;
-import com.fitmgr.admin.task.RestrictLoginTimeTask;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.log.annotation.SysLog;
-import com.fitmgr.job.api.entity.Task;
-import com.fitmgr.job.api.entity.XxlJobInfo;
-import com.fitmgr.job.api.enums.TaskExecTypeEnum;
-import com.fitmgr.job.api.sdk.FhJobApiController;
+import com.taibai.admin.api.entity.RestrictLloginTime;
+import com.taibai.admin.api.entity.SessionConfig;
+import com.taibai.admin.service.IRestrictLoginTimeService;
+import com.taibai.admin.service.ISessionConfigService;
+import com.taibai.admin.service.ISessionService;
+import com.taibai.admin.task.RestrictLoginTimeTask;
+import com.taibai.common.core.util.R;
+import com.taibai.common.log.annotation.SysLog;
+import com.taibai.job.api.entity.Task;
+import com.taibai.job.api.entity.XxlJobInfo;
+import com.taibai.job.api.enums.TaskExecTypeEnum;
+import com.taibai.job.api.sdk.FhJobApiController;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;

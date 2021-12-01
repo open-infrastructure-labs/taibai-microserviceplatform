@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.handler;
+package com.taibai.common.security.handler;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.security.authentication.event.AuthenticationSuccessEvent;
@@ -8,7 +8,7 @@ import org.springframework.security.core.Authentication;
 import cn.hutool.core.collection.CollUtil;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/10/8 认证成功事件处理器
  */
 public abstract class AbstractAuthenticationSuccessEventHandler

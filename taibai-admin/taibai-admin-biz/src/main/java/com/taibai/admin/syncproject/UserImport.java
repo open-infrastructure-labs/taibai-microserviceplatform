@@ -1,4 +1,4 @@
-package com.fitmgr.admin.syncproject;
+package com.taibai.admin.syncproject;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -19,20 +19,20 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.fitmgr.admin.api.constants.RoleLevelEnum;
-import com.fitmgr.admin.api.dto.UserDTO;
-import com.fitmgr.admin.api.entity.Role;
-import com.fitmgr.admin.api.entity.Tenant;
-import com.fitmgr.admin.api.entity.User;
-import com.fitmgr.admin.api.entity.UserRoleProject;
-import com.fitmgr.admin.exceptions.UserCenterException;
-import com.fitmgr.admin.mapper.RoleMapper;
-import com.fitmgr.admin.mapper.TenantMapper;
-import com.fitmgr.admin.mapper.UserMapper;
-import com.fitmgr.admin.mapper.UserRoleProjectMapper;
-import com.fitmgr.admin.service.impl.UserRoleProjectServiceImpl;
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
+import com.taibai.admin.api.constants.RoleLevelEnum;
+import com.taibai.admin.api.dto.UserDTO;
+import com.taibai.admin.api.entity.Role;
+import com.taibai.admin.api.entity.Tenant;
+import com.taibai.admin.api.entity.User;
+import com.taibai.admin.api.entity.UserRoleProject;
+import com.taibai.admin.exceptions.UserCenterException;
+import com.taibai.admin.mapper.RoleMapper;
+import com.taibai.admin.mapper.TenantMapper;
+import com.taibai.admin.mapper.UserMapper;
+import com.taibai.admin.mapper.UserRoleProjectMapper;
+import com.taibai.admin.service.impl.UserRoleProjectServiceImpl;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.common.core.constant.enums.BusinessEnum;
 
 import cn.hutool.core.util.StrUtil;
 import lombok.extern.slf4j.Slf4j;

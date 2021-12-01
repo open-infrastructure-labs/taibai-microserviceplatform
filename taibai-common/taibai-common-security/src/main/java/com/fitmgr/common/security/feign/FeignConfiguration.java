@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.feign;
+package com.taibai.common.security.feign;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -15,7 +15,7 @@ import feign.RequestInterceptor;
 /**
  * fegin 配置增强
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @Configuration
 @ConditionalOnClass(Feign.class)

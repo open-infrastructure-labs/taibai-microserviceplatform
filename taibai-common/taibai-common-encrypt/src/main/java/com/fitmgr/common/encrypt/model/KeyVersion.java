@@ -1,4 +1,4 @@
-package com.fitmgr.common.encrypt.model;
+package com.taibai.common.encrypt.model;
 
 import lombok.Data;
 

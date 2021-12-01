@@ -1,6 +1,6 @@
 
 
-package com.fitmgr.common.core.util;
+package com.taibai.common.core.util;
 
 
 import lombok.experimental.UtilityClass;

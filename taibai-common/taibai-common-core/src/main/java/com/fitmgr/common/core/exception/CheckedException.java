@@ -1,10 +1,10 @@
 
-package com.fitmgr.common.core.exception;
+package com.taibai.common.core.exception;
 
 import lombok.NoArgsConstructor;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 😴2018年06月22日16:21:57
  */
 @NoArgsConstructor

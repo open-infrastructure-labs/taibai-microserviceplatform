@@ -1,4 +1,4 @@
-package com.fitmgr.common.encrypt.config;
+package com.taibai.common.encrypt.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

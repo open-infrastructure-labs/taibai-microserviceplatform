@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.log.util;
+package com.taibai.common.log.util;
 
 import java.util.Objects;
 
@@ -11,8 +11,8 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.log.api.entity.OperateLog;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.log.api.entity.OperateLog;
 
 import cn.hutool.core.util.URLUtil;
 import cn.hutool.extra.servlet.ServletUtil;
@@ -21,7 +21,7 @@ import lombok.experimental.UtilityClass;
 /**
  * 系统日志工具类
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @UtilityClass
 public class SysLogUtils {

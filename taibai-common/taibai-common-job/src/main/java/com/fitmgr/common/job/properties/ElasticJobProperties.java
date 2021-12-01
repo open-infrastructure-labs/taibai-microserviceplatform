@@ -1,7 +1,7 @@
 
-package com.fitmgr.common.job.properties;
+package com.taibai.common.job.properties;
 
-import static com.fitmgr.common.job.ElasticJobAutoConfiguration.DEFAULT_REGISTRY_CENTER_NAME;
+import static com.taibai.common.job.ElasticJobAutoConfiguration.DEFAULT_REGISTRY_CENTER_NAME;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -14,7 +14,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/7/24 任务配置类
  */
 @Getter

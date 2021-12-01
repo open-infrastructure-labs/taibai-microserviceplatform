@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.swagger.config;
+package com.taibai.common.swagger.config;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 /**
  * SwaggerProperties
  *
- * @author Fitmgr
+ * @author Taibai
  * @date: 2018/7/25 14:00
  */
 @Data

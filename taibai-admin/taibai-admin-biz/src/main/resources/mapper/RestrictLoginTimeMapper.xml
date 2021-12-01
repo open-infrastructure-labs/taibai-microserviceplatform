@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.fitmgr.admin.mapper.RestrictLloginTimeMapper">
+<mapper namespace="com.taibai.admin.mapper.RestrictLloginTimeMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.fitmgr.admin.api.entity.RestrictLloginTime">
+    <resultMap id="BaseResultMap" type="com.taibai.admin.api.entity.RestrictLloginTime">
         <id column="id" property="id"/>
         <result column="switch" property="switches"/>
         <result column="start_time" property="startTime"/>

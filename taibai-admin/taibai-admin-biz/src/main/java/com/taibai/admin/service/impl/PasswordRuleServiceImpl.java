@@ -1,4 +1,4 @@
-package com.fitmgr.admin.service.impl;
+package com.taibai.admin.service.impl;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.fitmgr.admin.api.constants.PasswordRuleComplexity;
-import com.fitmgr.admin.api.entity.PasswordRule;
-import com.fitmgr.admin.exceptions.UserCenterException;
-import com.fitmgr.admin.mapper.PasswordRuleMapper;
-import com.fitmgr.admin.service.IPasswordRuleService;
+import com.taibai.admin.api.constants.PasswordRuleComplexity;
+import com.taibai.admin.api.entity.PasswordRule;
+import com.taibai.admin.exceptions.UserCenterException;
+import com.taibai.admin.mapper.PasswordRuleMapper;
+import com.taibai.admin.service.IPasswordRuleService;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
  * 密码规则表 服务实现类
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-16
  */
 @Slf4j

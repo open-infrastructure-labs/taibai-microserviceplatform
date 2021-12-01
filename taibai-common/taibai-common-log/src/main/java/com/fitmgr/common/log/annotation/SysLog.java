@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.log.annotation;
+package com.taibai.common.log.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -7,10 +7,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import com.fitmgr.common.core.constant.enums.OperateTypeEnum;
+import com.taibai.common.core.constant.enums.OperateTypeEnum;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2019/11/27 操作日志注解
  */
 @Target(ElementType.METHOD)

@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.component;
+package com.taibai.common.security.component;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -13,7 +13,7 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/6/22
  *       <p>
  *       1. 支持remoteTokenServices 负载均衡 2. 支持 获取用户全部信息

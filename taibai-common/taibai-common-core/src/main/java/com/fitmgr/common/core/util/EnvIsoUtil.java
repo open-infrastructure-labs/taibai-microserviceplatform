@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.util;
+package com.taibai.common.core.util;
 
 import java.util.Map;
 import java.util.Properties;
@@ -10,7 +10,7 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.fitmgr.common.core.constant.CommonConstants;
+import com.taibai.common.core.constant.CommonConstants;
 
 import lombok.extern.slf4j.Slf4j;
 

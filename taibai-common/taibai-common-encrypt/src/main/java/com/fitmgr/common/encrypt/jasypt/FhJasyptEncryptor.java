@@ -1,7 +1,7 @@
-package com.fitmgr.common.encrypt.jasypt;
+package com.taibai.common.encrypt.jasypt;
 
-import com.fitmgr.common.encrypt.util.AesUtil;
-import com.fitmgr.common.encrypt.config.KeyYmlModel;
+import com.taibai.common.encrypt.util.AesUtil;
+import com.taibai.common.encrypt.config.KeyYmlModel;
 import org.jasypt.encryption.StringEncryptor;
 import org.springframework.beans.factory.annotation.Autowired;
 

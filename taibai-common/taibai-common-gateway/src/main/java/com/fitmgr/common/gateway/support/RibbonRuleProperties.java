@@ -15,7 +15,7 @@
  * Author: lengleng (wangiegie@gmail.com)
  */
 
-package com.fitmgr.common.gateway.support;
+package com.taibai.common.gateway.support;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ import lombok.Setter;
 /**
  * Ribbon 配置
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @Getter
 @Setter

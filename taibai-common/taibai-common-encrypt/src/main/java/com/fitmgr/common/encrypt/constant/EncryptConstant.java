@@ -1,4 +1,4 @@
-package com.fitmgr.common.encrypt.constant;
+package com.taibai.common.encrypt.constant;
 
 public class EncryptConstant {
     public static final int KEY_TYPE_LEN = 1;

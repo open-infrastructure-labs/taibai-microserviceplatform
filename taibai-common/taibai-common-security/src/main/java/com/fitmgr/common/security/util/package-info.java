@@ -4,11 +4,11 @@
  * <p>
  * DefaultProperties: https://github.com/Netflix/Hystrix/issues/1446
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @NonNullApi
 @NonNullFields
-package com.fitmgr.common.security.util;
+package com.taibai.common.security.util;
 
 import org.springframework.lang.NonNullApi;
 import org.springframework.lang.NonNullFields;

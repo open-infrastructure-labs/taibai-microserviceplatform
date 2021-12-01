@@ -1,13 +1,13 @@
 
-package com.fitmgr.common.log.event;
+package com.taibai.common.log.event;
 
 import org.springframework.context.event.EventListener;
 import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.Async;
 
-import com.fitmgr.common.core.constant.SecurityConstants;
-import com.fitmgr.log.api.entity.OperateLog;
-import com.fitmgr.log.api.feign.RemoteOperateLogService;
+import com.taibai.common.core.constant.SecurityConstants;
+import com.taibai.log.api.entity.OperateLog;
+import com.taibai.log.api.feign.RemoteOperateLogService;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 异步监听日志事件
  * 
- * @author Fitmgr
+ * @author Taibai
  */
 @Slf4j
 @AllArgsConstructor

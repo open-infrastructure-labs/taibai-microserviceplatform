@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.constant.enums;
+package com.taibai.common.core.constant.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 折扣应用范围
  *
- * @author Fitmgr
+ * @author Taibai
  * @date 2020/10/21 16:35
  */
 @Getter

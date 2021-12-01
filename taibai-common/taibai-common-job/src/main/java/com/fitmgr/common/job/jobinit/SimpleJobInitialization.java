@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.job.jobinit;
+package com.taibai.common.job.jobinit;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -7,11 +7,11 @@ import java.util.Map.Entry;
 import com.dangdang.ddframe.job.config.JobCoreConfiguration;
 import com.dangdang.ddframe.job.config.JobTypeConfiguration;
 import com.dangdang.ddframe.job.config.simple.SimpleJobConfiguration;
-import com.fitmgr.common.job.properties.ElasticJobProperties;
-import com.fitmgr.common.job.properties.ElasticJobProperties.SimpleConfiguration;
+import com.taibai.common.job.properties.ElasticJobProperties;
+import com.taibai.common.job.properties.ElasticJobProperties.SimpleConfiguration;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/7/24 简单任务初始
  */
 public class SimpleJobInitialization extends AbstractJobInitialization {

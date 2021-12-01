@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -12,20 +12,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.fitmgr.admin.api.constants.PasswordRuleComplexity;
-import com.fitmgr.admin.api.constants.PasswordTermEnum;
-import com.fitmgr.admin.api.entity.MaxHisPassCount;
-import com.fitmgr.admin.api.entity.PasswordRule;
-import com.fitmgr.admin.api.entity.PasswordTerm;
-import com.fitmgr.admin.api.entity.User;
-import com.fitmgr.admin.api.vo.PasswordRuleVO;
-import com.fitmgr.admin.service.IMaxHisPassCountService;
-import com.fitmgr.admin.service.IPasswordRuleService;
-import com.fitmgr.admin.service.IPasswordTermService;
-import com.fitmgr.admin.service.IUserService;
-import com.fitmgr.common.core.constant.enums.UserTypeEnum;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.log.annotation.SysLog;
+import com.taibai.admin.api.constants.PasswordRuleComplexity;
+import com.taibai.admin.api.constants.PasswordTermEnum;
+import com.taibai.admin.api.entity.MaxHisPassCount;
+import com.taibai.admin.api.entity.PasswordRule;
+import com.taibai.admin.api.entity.PasswordTerm;
+import com.taibai.admin.api.entity.User;
+import com.taibai.admin.api.vo.PasswordRuleVO;
+import com.taibai.admin.service.IMaxHisPassCountService;
+import com.taibai.admin.service.IPasswordRuleService;
+import com.taibai.admin.service.IPasswordTermService;
+import com.taibai.admin.service.IUserService;
+import com.taibai.common.core.constant.enums.UserTypeEnum;
+import com.taibai.common.core.util.R;
+import com.taibai.common.log.annotation.SysLog;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -38,7 +38,7 @@ import lombok.AllArgsConstructor;
  * 安全配置 前端控制器
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-16
  */
 @RestController

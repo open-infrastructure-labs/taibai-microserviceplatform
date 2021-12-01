@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.util;
+package com.taibai.common.core.util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,7 +16,7 @@ import com.alibaba.fastjson.parser.Feature;
 
 /**
  * @描述 json动态解析工具类（解析执行模板定制工具类）  
- * @author Fitmgr    
+ * @author Taibai    
  */
 public class JsonAnalyzeUtil {
 

@@ -1,7 +1,7 @@
-package com.fitmgr.admin.exceptions;
+package com.taibai.admin.exceptions;
 
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.exception.BusinessException;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.exception.BusinessException;
 
 /**
  * @Auther: DZL

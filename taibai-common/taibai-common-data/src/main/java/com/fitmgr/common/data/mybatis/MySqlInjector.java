@@ -1,4 +1,4 @@
-package com.fitmgr.common.data.mybatis;
+package com.taibai.common.data.mybatis;
 
 import com.baomidou.mybatisplus.core.injector.AbstractMethod;
 import com.baomidou.mybatisplus.core.injector.DefaultSqlInjector;

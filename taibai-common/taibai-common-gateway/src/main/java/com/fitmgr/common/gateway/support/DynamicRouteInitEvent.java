@@ -1,10 +1,10 @@
 
-package com.fitmgr.common.gateway.support;
+package com.taibai.common.gateway.support;
 
 import org.springframework.context.ApplicationEvent;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/11/5
  *       <p>
  *       路由初始化事件

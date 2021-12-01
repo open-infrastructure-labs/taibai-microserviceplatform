@@ -10,10 +10,10 @@ spring:
       fail-fast: true
       name: ${spring.application.name}
       profile: ${spring.profiles.active}
-      uri: http://fitmgr-config:8888/
+      uri: http://taibai-config:8888/
 #      discovery:
 #        enabled: true
-#        service-id: fitmgr-config
+#        service-id: taibai-config
   autoconfigure:
     exclude: org.springframework.cloud.gateway.config.GatewayAutoConfiguration,org.springframework.cloud.gateway.config.GatewayClassPathWarningAutoConfiguration
   profiles:
@@ -68,10 +68,10 @@ hystrix:
 xxl:
   job:
     admin:
-      addresses: http://fitmgr-job:8080/fitmgr-job
+      addresses: http://taibai-job:8080/taibai-job
     accessToken:
     executor:
-      appname: fitmgr-admin-biz
+      appname: taibai-admin-biz
       address:
       ip:
       port: 3301

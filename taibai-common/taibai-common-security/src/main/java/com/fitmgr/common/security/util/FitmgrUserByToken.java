@@ -1,6 +1,6 @@
-package com.fitmgr.common.security.util;
+package com.taibai.common.security.util;
 
-import com.fitmgr.common.security.service.FitmgrUser;
+import com.taibai.common.security.service.FitmgrUser;
 import lombok.Data;
 
 import java.io.Serializable;

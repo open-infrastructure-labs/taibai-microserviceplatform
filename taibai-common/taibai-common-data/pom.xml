@@ -3,23 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>fitmgr-common</artifactId>
-        <groupId>com.fitmgr</groupId>
-        <version>V3R3B010</version>
+        <artifactId>taibai-common</artifactId>
+        <groupId>com.taibai</groupId>
+        <version>V1R1B010</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fitmgr-common-data</artifactId>
+    <artifactId>taibai-common-data</artifactId>
     <packaging>jar</packaging>
 
-    <description>fitmgr 数据操作相关</description>
+    <description>taibai 数据操作相关</description>
 
     <dependencies>
         <!--工具类核心包-->
         <dependency>
-            <groupId>com.fitmgr</groupId>
-            <artifactId>fitmgr-common-core</artifactId>
-            <version>${fitmgr.version}</version>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-core</artifactId>
+            <version>${taibai.version}</version>
         </dependency>
         <!--mybatis plus extension,包含了mybatis plus core-->
         <dependency>
@@ -29,9 +29,9 @@
         </dependency>
         <!--安全依赖获取上下文信息-->
         <dependency>
-            <groupId>com.fitmgr</groupId>
-            <artifactId>fitmgr-common-security</artifactId>
-            <version>${fitmgr.version}</version>
+            <groupId>com.taibai</groupId>
+            <artifactId>taibai-common-security</artifactId>
+            <version>${taibai.version}</version>
         </dependency>
         <!--缓存依赖-->
         <dependency>
@@ -49,12 +49,12 @@
         <repository>
             <id>nexus</id>
             <name>Releases</name>
-            <url>http://10.127.9.32:8081/repository/maven-fitmgr-releases</url>
+            <url>http://10.127.9.32:8081/repository/maven-taibai-releases</url>
         </repository>
         <snapshotRepository>
             <id>nexus</id>
             <name>Snapshot</name>
-            <url>http://10.127.9.32:8081/repository/maven-fitmgr-snapshots</url>
+            <url>http://10.127.9.32:8081/repository/maven-taibai-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 </project>

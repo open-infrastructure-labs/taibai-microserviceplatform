@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -21,18 +21,18 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fitmgr.admin.api.entity.Role;
-import com.fitmgr.admin.api.entity.RoleGroup;
-import com.fitmgr.admin.api.entity.RoleGroupRole;
-import com.fitmgr.admin.api.validation.Save;
-import com.fitmgr.admin.api.vo.RoleGroupVO;
-import com.fitmgr.admin.service.IRoleGroupRoleService;
-import com.fitmgr.admin.service.IRoleGroupService;
-import com.fitmgr.admin.service.IRoleService;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.log.annotation.SysLog;
-import com.fitmgr.webpush.api.feign.RemoteWebpushService;
+import com.taibai.admin.api.entity.Role;
+import com.taibai.admin.api.entity.RoleGroup;
+import com.taibai.admin.api.entity.RoleGroupRole;
+import com.taibai.admin.api.validation.Save;
+import com.taibai.admin.api.vo.RoleGroupVO;
+import com.taibai.admin.service.IRoleGroupRoleService;
+import com.taibai.admin.service.IRoleGroupService;
+import com.taibai.admin.service.IRoleService;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.util.R;
+import com.taibai.common.log.annotation.SysLog;
+import com.taibai.webpush.api.feign.RemoteWebpushService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -45,7 +45,7 @@ import lombok.AllArgsConstructor;
  * 角色分组表 前端控制器
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-16
  */
 @RestController

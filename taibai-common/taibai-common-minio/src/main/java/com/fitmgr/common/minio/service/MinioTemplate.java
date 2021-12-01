@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.minio.service;
+package com.taibai.common.minio.service;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.Assert;
 
-import com.fitmgr.common.minio.vo.MinioItem;
+import com.taibai.common.minio.vo.MinioItem;
 
 import io.minio.MinioClient;
 import io.minio.ObjectStat;
@@ -22,7 +22,7 @@ import lombok.SneakyThrows;
 /**
  * minio 交互类
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @RequiredArgsConstructor
 public class MinioTemplate implements InitializingBean {

@@ -1,7 +1,7 @@
-package com.fitmgr.common.encrypt.config;
+package com.taibai.common.encrypt.config;
 
-import com.fitmgr.common.encrypt.enums.SecretKeyType;
-import com.fitmgr.common.encrypt.model.KeyVersion;
+import com.taibai.common.encrypt.enums.SecretKeyType;
+import com.taibai.common.encrypt.model.KeyVersion;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

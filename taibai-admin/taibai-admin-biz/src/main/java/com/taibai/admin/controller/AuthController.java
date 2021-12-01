@@ -1,4 +1,4 @@
-package com.fitmgr.admin.controller;
+package com.taibai.admin.controller;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -14,18 +14,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fitmgr.admin.api.entity.Auth;
-import com.fitmgr.admin.api.entity.AuthCheck;
-import com.fitmgr.admin.api.entity.ResInfo;
-import com.fitmgr.admin.api.vo.AuthCheckVO;
-import com.fitmgr.admin.api.vo.AuthVO;
-import com.fitmgr.admin.service.IAuthService;
-import com.fitmgr.admin.service.IUserService;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.log.annotation.SysLog;
-import com.fitmgr.common.security.service.FitmgrUser;
-import com.fitmgr.common.security.util.SecurityUtils;
+import com.taibai.admin.api.entity.Auth;
+import com.taibai.admin.api.entity.AuthCheck;
+import com.taibai.admin.api.entity.ResInfo;
+import com.taibai.admin.api.vo.AuthCheckVO;
+import com.taibai.admin.api.vo.AuthVO;
+import com.taibai.admin.service.IAuthService;
+import com.taibai.admin.service.IUserService;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.util.R;
+import com.taibai.common.log.annotation.SysLog;
+import com.taibai.common.security.service.FitmgrUser;
+import com.taibai.common.security.util.SecurityUtils;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -39,7 +39,7 @@ import lombok.extern.slf4j.Slf4j;
  * 操作权限表 前端控制器check-by-url-method
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-14
  */
 @Slf4j

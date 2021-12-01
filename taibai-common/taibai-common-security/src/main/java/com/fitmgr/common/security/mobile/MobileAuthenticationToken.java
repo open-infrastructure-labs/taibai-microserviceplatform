@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.mobile;
+package com.taibai.common.security.mobile;
 
 import java.util.Collection;
 
@@ -10,7 +10,7 @@ import org.springframework.security.core.SpringSecurityCoreVersion;
 import lombok.SneakyThrows;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/1/9 手机号登录令牌
  */
 public class MobileAuthenticationToken extends AbstractAuthenticationToken {

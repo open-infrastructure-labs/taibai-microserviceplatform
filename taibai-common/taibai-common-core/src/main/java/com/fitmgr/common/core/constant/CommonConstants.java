@@ -1,12 +1,12 @@
 
-package com.fitmgr.common.core.constant;
+package com.taibai.common.core.constant;
 
 /**
  * <p>
  * CommonConstants 通用常量
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @date 2017/10/29
  */
 public interface CommonConstants {
@@ -41,12 +41,12 @@ public interface CommonConstants {
     /**
      * 前端工程名
      */
-    String FRONT_END_PROJECT = "fitmgr-ui";
+    String FRONT_END_PROJECT = "taibai-ui";
 
     /**
      * 后端工程名
      */
-    String BACK_END_PROJECT = "fitmgr";
+    String BACK_END_PROJECT = "taibai";
 
     /**
      * 路由存放
@@ -75,7 +75,7 @@ public interface CommonConstants {
     /**
      * 默认存储bucket
      */
-    String BUCKET_NAME = "fitmgr";
+    String BUCKET_NAME = "taibai";
 
     /**
      * 归属类型：1-租户
@@ -218,7 +218,7 @@ public interface CommonConstants {
     String import_vdc_fail = "import_vdc_fail_";
     String import_vdc_logs = "import_vdc_logs";
 
-    String LOG_SERVER_ID = "fitmgr-resourcecenter-biz";
+    String LOG_SERVER_ID = "taibai-resourcecenter-biz";
 
     String LOG_TITLE = "设置存储池性能等级";
 

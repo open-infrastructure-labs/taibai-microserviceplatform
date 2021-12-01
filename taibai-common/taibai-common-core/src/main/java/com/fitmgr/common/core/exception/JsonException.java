@@ -1,11 +1,11 @@
-package com.fitmgr.common.core.exception;
+package com.taibai.common.core.exception;
 
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.constant.enums.BusinessEnum;
 
 /**
  * JSON合并异常
  * 
- * @author Fitmgr
+ * @author Taibai
  * @date 2019-12-31
  */
 public class JsonException extends BusinessException {

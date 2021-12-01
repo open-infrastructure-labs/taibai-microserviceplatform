@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.feign;
+package com.taibai.common.security.feign;
 
 import java.util.Collection;
 
@@ -14,19 +14,19 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.fitmgr.common.core.config.EnvIsolationConfig;
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.common.core.constant.SecurityConstants;
-import com.fitmgr.common.core.util.EnvIsoUtil;
-import com.fitmgr.common.core.util.SpringContextHolder;
-import com.fitmgr.common.security.util.SecurityUtils;
+import com.taibai.common.core.config.EnvIsolationConfig;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.common.core.constant.SecurityConstants;
+import com.taibai.common.core.util.EnvIsoUtil;
+import com.taibai.common.core.util.SpringContextHolder;
+import com.taibai.common.security.util.SecurityUtils;
 
 import cn.hutool.core.collection.CollUtil;
 import feign.RequestTemplate;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/8/13 扩展OAuth2FeignRequestInterceptor
  */
 @Slf4j

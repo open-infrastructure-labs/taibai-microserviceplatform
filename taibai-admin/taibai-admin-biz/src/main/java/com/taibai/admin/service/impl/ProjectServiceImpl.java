@@ -1,4 +1,4 @@
-package com.fitmgr.admin.service.impl;
+package com.taibai.admin.service.impl;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -22,39 +22,39 @@ import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.fitmgr.admin.api.dto.ProjectDTO;
-import com.fitmgr.admin.api.dto.UserDTO;
-import com.fitmgr.admin.api.entity.AuthCheck;
-import com.fitmgr.admin.api.entity.Project;
-import com.fitmgr.admin.api.entity.ProjectOperatingRange;
-import com.fitmgr.admin.api.entity.Role;
-import com.fitmgr.admin.api.entity.User;
-import com.fitmgr.admin.api.entity.UserRoleProject;
-import com.fitmgr.admin.api.feign.RemoteTokenService;
-import com.fitmgr.admin.api.vo.Member;
-import com.fitmgr.admin.api.vo.ProjectVO;
-import com.fitmgr.admin.api.vo.UserVO;
-import com.fitmgr.admin.exceptions.UserCenterException;
-import com.fitmgr.admin.mapper.ProjectMapper;
-import com.fitmgr.admin.mapper.RoleMapper;
-import com.fitmgr.admin.mapper.TenantMapper;
-import com.fitmgr.admin.mapper.UserMapper;
-import com.fitmgr.admin.mapper.UserRoleProjectMapper;
-import com.fitmgr.admin.service.IAuthService;
-import com.fitmgr.admin.service.IProjectService;
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.common.core.constant.SecurityConstants;
-import com.fitmgr.common.core.constant.enums.ApiEnum;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.constant.enums.OperatingRangeEnum;
-import com.fitmgr.common.core.constant.enums.ResponseCodeEnum;
-import com.fitmgr.common.core.exception.BusinessException;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.security.service.FitmgrUser;
-import com.fitmgr.common.security.util.SecurityUtils;
-import com.fitmgr.quota.api.entity.QuotaRelationProject;
-import com.fitmgr.quota.api.feign.RemoteQuotaService;
-import com.fitmgr.resource.api.feign.RemoteCmdbService;
+import com.taibai.admin.api.dto.ProjectDTO;
+import com.taibai.admin.api.dto.UserDTO;
+import com.taibai.admin.api.entity.AuthCheck;
+import com.taibai.admin.api.entity.Project;
+import com.taibai.admin.api.entity.ProjectOperatingRange;
+import com.taibai.admin.api.entity.Role;
+import com.taibai.admin.api.entity.User;
+import com.taibai.admin.api.entity.UserRoleProject;
+import com.taibai.admin.api.feign.RemoteTokenService;
+import com.taibai.admin.api.vo.Member;
+import com.taibai.admin.api.vo.ProjectVO;
+import com.taibai.admin.api.vo.UserVO;
+import com.taibai.admin.exceptions.UserCenterException;
+import com.taibai.admin.mapper.ProjectMapper;
+import com.taibai.admin.mapper.RoleMapper;
+import com.taibai.admin.mapper.TenantMapper;
+import com.taibai.admin.mapper.UserMapper;
+import com.taibai.admin.mapper.UserRoleProjectMapper;
+import com.taibai.admin.service.IAuthService;
+import com.taibai.admin.service.IProjectService;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.common.core.constant.SecurityConstants;
+import com.taibai.common.core.constant.enums.ApiEnum;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.constant.enums.OperatingRangeEnum;
+import com.taibai.common.core.constant.enums.ResponseCodeEnum;
+import com.taibai.common.core.exception.BusinessException;
+import com.taibai.common.core.util.R;
+import com.taibai.common.security.service.FitmgrUser;
+import com.taibai.common.security.util.SecurityUtils;
+import com.taibai.quota.api.entity.QuotaRelationProject;
+import com.taibai.quota.api.feign.RemoteQuotaService;
+import com.taibai.resource.api.feign.RemoteCmdbService;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -64,7 +64,7 @@ import lombok.extern.slf4j.Slf4j;
  * project表 服务实现类
  * </p>
  *
- * @author Fitmgr
+ * @author Taibai
  * @since 2019-11-15
  */
 @Slf4j

@@ -15,7 +15,7 @@
  * Author: lengleng (wangiegie@gmail.com)
  */
 
-package com.fitmgr.common.gateway.filter;
+package com.taibai.common.gateway.filter;
 
 import static org.springframework.cloud.gateway.support.ServerWebExchangeUtils.GATEWAY_REQUEST_URL_ATTR;
 
@@ -29,7 +29,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.web.server.ServerWebExchange;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  */
 public class GrayLoadBalancerClientFilter extends LoadBalancerClientFilter {
     private final RibbonLoadBalancerClient loadBalancer;

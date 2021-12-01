@@ -8,7 +8,7 @@ import feign.RequestTemplate;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/9/14
  */
 @Slf4j

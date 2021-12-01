@@ -1,11 +1,11 @@
 
-package com.fitmgr.common.security.exception;
+package com.taibai.common.security.exception;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fitmgr.common.security.component.Auth2ExceptionSerializer;
+import com.taibai.common.security.component.Auth2ExceptionSerializer;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2018/7/8
  */
 @JsonSerialize(using = Auth2ExceptionSerializer.class)

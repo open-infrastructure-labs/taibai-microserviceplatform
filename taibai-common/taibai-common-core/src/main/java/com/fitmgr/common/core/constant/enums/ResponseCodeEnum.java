@@ -1,10 +1,10 @@
-package com.fitmgr.common.core.constant.enums;
+package com.taibai.common.core.constant.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2019-11-6
  */
 @Getter

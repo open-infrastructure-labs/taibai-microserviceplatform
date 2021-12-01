@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.fitmgr.admin.mapper.MenuMapper">
+<mapper namespace="com.taibai.admin.mapper.MenuMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.fitmgr.admin.api.entity.Menu">
+    <resultMap id="BaseResultMap" type="com.taibai.admin.api.entity.Menu">
         <id column="id" property="id"/>
         <id column="menu_id" property="menuId"/>
         <result column="name" property="name"/>
@@ -45,7 +45,7 @@
         delete from role_menu where role_id = #{roleId}
     </delete>
 
-    <select id="getSysMenu" resultType="com.fitmgr.admin.api.vo.MenuVO">
+    <select id="getSysMenu" resultType="com.taibai.admin.api.vo.MenuVO">
         SELECT
         m.id,m.menu_id, m.name, m.path, m.parent_id,m.type,title,redirect,m.hidden, m.icon, m.component,rm.half, m.sort,m.keep_alive, m.status, m.create_time, m.update_time, m.del_flag, m.menu_order,
         m.is_external, m.external_login_url, m.external_username, external_pwd, m.template_id, m.is_global
@@ -63,7 +63,7 @@
         ORDER BY create_time
     </select>
 
-    <select id="getSysMenus" resultType="com.fitmgr.admin.api.vo.MenuVO">
+    <select id="getSysMenus" resultType="com.taibai.admin.api.vo.MenuVO">
         SELECT
         m.id,m.menu_id, m.name, m.path, m.parent_id,m.type,title,redirect,m.hidden, m.icon, m.component,rm.half, m.sort,m.keep_alive, m.status, m.create_time, m.update_time, m.del_flag, m.menu_order,
         m.is_external, m.external_login_url, m.external_username, external_pwd, m.template_id, m.is_global

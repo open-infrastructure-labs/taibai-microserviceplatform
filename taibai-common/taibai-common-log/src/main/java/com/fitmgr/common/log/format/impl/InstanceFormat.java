@@ -1,18 +1,18 @@
-package com.fitmgr.common.log.format.impl;
+package com.taibai.common.log.format.impl;
 
 import java.util.Iterator;
 import java.util.Map;
 
-import com.fitmgr.common.core.constant.CommonConstants;
-import com.fitmgr.common.core.constant.enums.BusinessEnum;
-import com.fitmgr.common.core.util.R;
-import com.fitmgr.common.core.util.SpringContextHolder;
-import com.fitmgr.common.log.format.IFormat;
-import com.fitmgr.resource.api.feign.RemoteCmdbService;
-import com.fitmgr.resource.api.feign.RemoteComponentService;
-import com.fitmgr.resource.api.feign.RemoteResourceTypeService;
-import com.fitmgr.resource.api.vo.ComponentVO;
-import com.fitmgr.resource.api.vo.ResourceTypeVO;
+import com.taibai.common.core.constant.CommonConstants;
+import com.taibai.common.core.constant.enums.BusinessEnum;
+import com.taibai.common.core.util.R;
+import com.taibai.common.core.util.SpringContextHolder;
+import com.taibai.common.log.format.IFormat;
+import com.taibai.resource.api.feign.RemoteCmdbService;
+import com.taibai.resource.api.feign.RemoteComponentService;
+import com.taibai.resource.api.feign.RemoteResourceTypeService;
+import com.taibai.resource.api.vo.ComponentVO;
+import com.taibai.resource.api.vo.ResourceTypeVO;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
@@ -21,7 +21,7 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * @author Fitmgr
+ * @author Taibai
  * @date 2020-05-03
  */
 @Slf4j

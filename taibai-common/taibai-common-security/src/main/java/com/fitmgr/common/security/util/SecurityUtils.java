@@ -1,5 +1,5 @@
 
-package com.fitmgr.common.security.util;
+package com.taibai.common.security.util;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,10 +16,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.client.RestTemplate;
 
 import com.alibaba.fastjson.JSON;
-import com.fitmgr.common.core.config.InternalAdminConfig;
-import com.fitmgr.common.core.constant.SecurityConstants;
-import com.fitmgr.common.core.util.SpringContextHolder;
-import com.fitmgr.common.security.service.FitmgrUser;
+import com.taibai.common.core.config.InternalAdminConfig;
+import com.taibai.common.core.constant.SecurityConstants;
+import com.taibai.common.core.util.SpringContextHolder;
+import com.taibai.common.security.service.FitmgrUser;
 
 import cn.hutool.core.util.StrUtil;
 import lombok.experimental.UtilityClass;
@@ -28,7 +28,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 安全工具类
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @Slf4j
 @UtilityClass
@@ -36,7 +36,7 @@ public class SecurityUtils {
 
     private RestTemplate restTemplate;
 
-    private static final String AUTH_SERVICE = "fitmgr-auth";
+    private static final String AUTH_SERVICE = "taibai-auth";
 
     public static final String INTERNAL_ADMIN = "internal_admin";
 
@@ -53,7 +53,7 @@ public class SecurityUtils {
      * 获取用户
      *
      * @param authentication
-     * @return FitmgrUser
+     * @return TaibaiUser
      *         <p>
      *         获取当前用户的全部信息 EnableFitmgrResourceServer true 获取当前用户的用户名
      *         EnableFitmgrResourceServer false
@@ -101,7 +101,7 @@ public class SecurityUtils {
         if (internalAdminConfig == null) {
             internalAdminConfig = SpringContextHolder.getBean(InternalAdminConfig.class);
         }
-        String url = "http://fitmgr-auth/oauth/token" + "?scope=server&grant_type=password&username="
+        String url = "http://taibai-auth/oauth/token" + "?scope=server&grant_type=password&username="
                 + internalAdminConfig.getInternalUserName() + "&password=" + internalAdminConfig.getInternalUserPass();
         HttpHeaders headers = new HttpHeaders();
         headers.add("Authorization", "Basic dGVzdDp0ZXN0");

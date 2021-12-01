@@ -1,4 +1,4 @@
-package com.fitmgr.common.core.util;
+package com.taibai.common.core.util;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,7 +8,7 @@ import lombok.Data;
 /**
  * excel 数据
  * 
- * @author Fitmgr
+ * @author Taibai
  * @date 2019-11-28
  */
 @Data

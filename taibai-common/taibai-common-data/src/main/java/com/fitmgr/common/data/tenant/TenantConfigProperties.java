@@ -1,4 +1,4 @@
-package com.fitmgr.common.data.tenant;
+package com.taibai.common.data.tenant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +11,11 @@ import lombok.Data;
 /**
  * 多租户配置
  *
- * @author Fitmgr
+ * @author Taibai
  */
 @Data
 @Configuration
-@ConfigurationProperties(prefix = "fitmgr.tenant")
+@ConfigurationProperties(prefix = "taibai.tenant")
 public class TenantConfigProperties {
 
     /**

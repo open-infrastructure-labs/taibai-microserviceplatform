@@ -1,6 +1,6 @@
-package com.fitmgr.common.encrypt.util;
+package com.taibai.common.encrypt.util;
 
-import com.fitmgr.common.encrypt.constant.EncryptConstant;
+import com.taibai.common.encrypt.constant.EncryptConstant;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 

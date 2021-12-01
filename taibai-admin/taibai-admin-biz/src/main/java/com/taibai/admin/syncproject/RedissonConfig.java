@@ -1,4 +1,4 @@
-package com.fitmgr.admin.syncproject;
+package com.taibai.admin.syncproject;
 
 import org.redisson.api.RedissonClient;
 import org.springframework.context.annotation.Bean;
