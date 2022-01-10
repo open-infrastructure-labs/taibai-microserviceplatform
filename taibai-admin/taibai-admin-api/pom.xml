@@ -12,7 +12,7 @@
     <artifactId>taibai-admin-api</artifactId>
     <packaging>jar</packaging>
 
-    <description>taibai 通用用户权限管理系统公共api模块</description>
+    <description>API module of general user privilege management system</description>
 
     <dependencies>
         <!-- swagger -->
