@@ -12,10 +12,10 @@
     <artifactId>taibai-admin-biz</artifactId>
     <packaging>jar</packaging>
 
-    <description>taibai 通用用户权限管理系统业务处理模块</description>
+    <description>business process modules of general user privilege management system</description>
 
     <dependencies>
-        <!--upms api、model 模块-->
+        <!--modules of upms api、model-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-common-transaction</artifactId>
@@ -37,13 +37,13 @@
             <artifactId>spring-cloud-commons</artifactId>
             <version>${spring-cloud-commons.version}</version>
         </dependency>
-        <!--upms api、model 模块-->
+        <!--modules of upms api、model-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-admin-api</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--日志处理-->
+        <!--log process-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-common-log</artifactId>
@@ -70,23 +70,23 @@
             <artifactId>taibai-common-swagger</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--文件系统-->
+        <!--file system-->
 <!--        <dependency>-->
 <!--            <groupId>com.taibai</groupId>-->
 <!--            <artifactId>taibai-common-minio</artifactId>-->
 <!--            <version>${taibai.version}</version>-->
 <!--        </dependency>-->
-        <!--eureka 客户端-->
+        <!--eureka client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <!--配置中心客户端-->
+        <!--client of configuration center-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-        <!--spring security 、oauth、jwt依赖-->
+        <!--dependence to spring security 、oauth、jwt-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-common-security</artifactId>
@@ -98,13 +98,13 @@
             <artifactId>jjwt</artifactId>
             <version>0.9.1</version>
         </dependency> -->
-        <!--支持动态路由配置 -->
+        <!--gateway configuration-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-common-gateway</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--template模块-->
+        <!--template module-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-template-api</artifactId>
@@ -115,17 +115,17 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
-        <!--数据库-->
+        <!--Database-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!--web 模块-->
+        <!--web module-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!--undertow容器-->
+        <!--undertow-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-undertow</artifactId>
@@ -141,19 +141,19 @@
             <artifactId>velocity-engine-core</artifactId>
             <version>2.1</version>
         </dependency> -->
-        <!--集成logstash-->
+        <!--logstash-->
         <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
             <version>${logstash.version}</version>
         </dependency>
-        <!--minio 文件存储服务-->
+        <!--minio file storage service-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-common-minio</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--代码生成器-->
+        <!--code generator-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
@@ -211,14 +211,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <!-- 指定该Main Class为全局的唯一入口 -->
+                    <!--specify this Main Class as only entrance-->
                     <mainClass>com.taibai.admin.AdminApplication</mainClass>
                     <layout>ZIP</layout>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                            <goal>repackage</goal>
                         </goals>
                     </execution>
                 </executions>

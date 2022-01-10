@@ -11,7 +11,7 @@
 
     <artifactId>taibai-admin</artifactId>
 
-    <description>taibai 通用用户权限管理聚合模块</description>
+    <description>aggregation module of general user privilege management system</description>
     <packaging>pom</packaging>
     <modules>
         <module>taibai-admin-api</module>
