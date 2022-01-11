@@ -11,7 +11,7 @@
     <artifactId>taibai-common-encrypt</artifactId>
     <packaging>jar</packaging>
 
-    <description>taibai 公共工具类加解密包</description>
+    <description>encryption and decryption tools</description>
 
     <properties>
         <dynamic.compile>true</dynamic.compile>
@@ -51,14 +51,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <!-- 指定该Main Class为全局的唯一入口 -->
+                    <!-- specify this Main Class as only entrance -->
                     <mainClass>com.taibai.common.encrypt.go.GoDecryptMain</mainClass>
                     <layout>ZIP</layout>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                            <goal>repackage</goal>
                         </goals>
                     </execution>
                 </executions>

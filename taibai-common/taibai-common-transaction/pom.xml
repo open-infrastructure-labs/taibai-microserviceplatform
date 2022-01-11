@@ -12,7 +12,7 @@
     <artifactId>fitmgr-common-transaction</artifactId>
     <packaging>jar</packaging>
 
-    <description>fitmgr lcn 分布式事务</description>
+    <description>distributed transaction lcn</description>
 
     <dependencies>
         <dependency>
@@ -20,7 +20,7 @@
             <artifactId>fitmgr-common-core</artifactId>
             <version>${fitmgr.version}</version>
         </dependency>
-        <!--lcn 模块端控制依赖-->
+        <!--lcn controller client dependency-->
         <dependency>
             <groupId>com.codingapi</groupId>
             <artifactId>tx-client</artifactId>
@@ -43,7 +43,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!--feign 依赖-->
+        <!--feign dependency-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>

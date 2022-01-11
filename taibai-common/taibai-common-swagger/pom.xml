@@ -12,10 +12,10 @@
     <artifactId>fitmgr-common-swagger</artifactId>
     <packaging>jar</packaging>
 
-    <description>fitmgr  公共接口文档</description>
+    <description>API Doc</description>
 
     <dependencies>
-        <!--swagger 依赖-->
+        <!--swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>

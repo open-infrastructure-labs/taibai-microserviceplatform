@@ -11,22 +11,22 @@
     <artifactId>taibai-common-security</artifactId>
     <packaging>jar</packaging>
 
-    <description>taibai 公共注解-熔断器-feign安全配置</description>
+    <description>security configuration of feign</description>
 
     <dependencies>
-        <!--工具类核心包-->
+        <!--core package of common tools-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-common-core</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--UPMS API-->
+        <!--API of UPMS-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-admin-api</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--安全模块-->
+        <!--security module-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-security</artifactId>

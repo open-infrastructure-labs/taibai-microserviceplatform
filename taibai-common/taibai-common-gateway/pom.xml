@@ -12,7 +12,7 @@
     <artifactId>taibai-common-gateway</artifactId>
     <packaging>jar</packaging>
 
-    <description>taibai 公共网关配置</description>
+    <description>configuration of public gateway</description>
 
     <dependencies>
         <dependency>

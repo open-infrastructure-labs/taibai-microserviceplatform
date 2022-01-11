@@ -12,10 +12,10 @@
     <artifactId>taibai-common-log</artifactId>
     <packaging>jar</packaging>
 
-    <description>taibai 日志服务</description>
+    <description>log service</description>
 
     <dependencies>
-        <!--工具类核心包-->
+        <!--core package of common tools-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-common-core</artifactId>
@@ -26,25 +26,25 @@
             <artifactId>taibai-common-security</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--UPMS接口模块-->
+        <!--API of UPMS-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-admin-api</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--LOG接口模块-->
+        <!--API of LOG-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-log-api</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!-- 资源api -->
+        <!--API of resource-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-resource-api</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--安全依赖获取上下文信息-->
+        <!--security context-->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>

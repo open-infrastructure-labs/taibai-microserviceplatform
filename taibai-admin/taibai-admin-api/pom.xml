@@ -27,7 +27,7 @@
             <artifactId>mybatis-plus-extension</artifactId>
             <version>${mybatis-plus.version}</version>
         </dependency>
-        <!--core 工具类-->
+        <!--core package of common tools-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-common-core</artifactId>

@@ -12,33 +12,33 @@
     <artifactId>taibai-common-data</artifactId>
     <packaging>jar</packaging>
 
-    <description>taibai 数据操作相关</description>
+    <description>data operation</description>
 
     <dependencies>
-        <!--工具类核心包-->
+        <!--core package of common tools-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-common-core</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--mybatis plus extension,包含了mybatis plus core-->
+        <!--mybatis plus extension including mybatis plus core-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-extension</artifactId>
             <version>${mybatis-plus.version}</version>
         </dependency>
-        <!--安全依赖获取上下文信息-->
+        <!--security context-->
         <dependency>
             <groupId>com.taibai</groupId>
             <artifactId>taibai-common-security</artifactId>
             <version>${taibai.version}</version>
         </dependency>
-        <!--缓存依赖-->
+        <!--redis-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        <!--redisson 模块-->
+        <!--redisson-->
         <dependency>
             <groupId>org.redisson</groupId>
             <artifactId>redisson-spring-boot-starter</artifactId>

@@ -11,7 +11,7 @@
     <artifactId>fitmgr-common-update-key</artifactId>
     <packaging>jar</packaging>
 
-    <description>fitmgr kms注册与kms秘钥更新公共包</description>
+    <description>common package of kms register and key update</description>
 
     <dependencies>
 

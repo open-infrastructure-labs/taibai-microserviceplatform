@@ -12,7 +12,7 @@
     <artifactId>fitmgr-common-minio</artifactId>
     <packaging>jar</packaging>
 
-    <description>fitmgr 文件系统依赖</description>
+    <description>file storage</description>
 
     <dependencies>
         <dependency>

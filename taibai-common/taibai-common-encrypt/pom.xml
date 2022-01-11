@@ -11,7 +11,7 @@
     <artifactId>taibai-common-encrypt</artifactId>
     <packaging>jar</packaging>
 
-    <description>taibai 公共工具类加解密包</description>
+    <description>encryption and decryption tools</description>
 
     <dependencies>
 
