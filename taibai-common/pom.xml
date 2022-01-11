@@ -12,7 +12,7 @@
     <artifactId>taibai-common</artifactId>
     <packaging>pom</packaging>
 
-    <description>taibai 公共聚合模块</description>
+    <description>common package</description>
 
     <modules>
         <!--<module>taibai-common-bom</module>-->

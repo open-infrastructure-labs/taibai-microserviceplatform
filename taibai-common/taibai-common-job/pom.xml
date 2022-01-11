@@ -12,7 +12,7 @@
     <artifactId>taibai-common-job</artifactId>
     <packaging>jar</packaging>
 
-    <description>taibai 定时任务</description>
+    <description>time task</description>
 
     <dependencies>
         <!-- import elastic-job lite core -->
